@@ -3,8 +3,9 @@ import Header from "@/componets/Header/Header";
 import React from "react";
 
 export default function Home() {
-  return (<div className="page">
-    {/*<LiquidBackground/>*/}
+  return (
+    <div className="page">
+    <LiquidBackground/>
     <img
       src="/images/noize.png"
       className="noise"
@@ -13,6 +14,7 @@ export default function Home() {
     <main className="content">
       <Header/>
       <img
+
         className="background"
         src="/images/background.png"
         alt="background"
@@ -24,6 +26,28 @@ export default function Home() {
         <div className={"subtitle"}>
           Быстрые сервера в актуальных точках мира, стабильное подключение и бесплатный 7-ми дневный период по ссылке
         </div>
+
+
+        <div className="glass_button_container">
+
+          <button className="glass_button">
+            Подключить
+          </button>
+
+          <img width={109}
+               height={19}
+               src={"/images/systems.svg"}
+               className="glass_button_icons"/>
+        </div>
+
+        {/*<div className={"glass_button_container"}>*/}
+
+        {/*  <button className={"glass_button"} disabled>*/}
+        {/*  Подключить*/}
+        {/*  </button>*/}
+
+
+        {/*</div>*/}
       </div>
     </main>
   </div>);
