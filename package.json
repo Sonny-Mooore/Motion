@@ -1,0 +1,19 @@
+{
+  "name": "lendos",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "16.1.6",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-launcher": "^1.0.3",
+    "simple-waves": "^1.2.1",
+    "three": "^0.182.0",
+    "vanta": "^0.5.24"
+  }
+}
