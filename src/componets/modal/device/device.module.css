@@ -1,0 +1,198 @@
+.layer {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 15, 15, 0.75);
+  z-index: 9999;
+  pointer-events: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 14px;
+  justify-content: center;
+
+}
+
+.onClose {
+  display: none;
+}
+
+.main {
+  width: 836px;
+  border-radius: 18px;
+  height: 732px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  justify-content: center;
+  backdrop-filter: blur(22px) saturate(140%);
+  -webkit-backdrop-filter: blur(22px) saturate(140%);
+  border: rgba(255, 255, 255, 0.07) 1px solid;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.18),
+  inset 0 -18px 30px rgba(0, 0, 0, 0.45),
+  0 10px 40px rgba(0, 0, 0, 0.55);
+}
+
+
+.column {
+  width: 169px;
+  cursor: pointer;
+  border-radius: 18px;
+  height: 732px;
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  justify-content: center;
+  backdrop-filter: blur(22px) saturate(140%);
+  -webkit-backdrop-filter: blur(22px) saturate(140%);
+  border: rgba(255, 255, 255, 0.07) 1px solid;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.18),
+  inset 0 -18px 30px rgba(0, 0, 0, 0.45),
+  0 10px 40px rgba(0, 0, 0, 0.55);
+}
+
+.text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  font-size: 23px;
+  max-width: 254px;
+  color: rgba(255, 255, 255, 1);
+}
+
+
+.bgVideo {
+  position: absolute;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* новое */
+
+.mobileWrapper {
+  position: relative;
+  width: 390px;
+  height: 824px;
+  background: rgba(17, 17, 17, 1);
+  overflow: hidden;
+  border-radius: 24px;
+  z-index: 1;
+  padding: 24px;
+  border: red solid 1px;
+
+
+  /*background: linear-gradient(*/
+  /*        to top,*/
+  /*        rgba(0, 0, 0, 0.0) 100%,*/
+  /*        rgba(0, 0, 0, 0.35) 100%,*/
+  /*        rgba(0, 0, 0, 0.65) 100%*/
+  /*);*/
+}
+
+/* контейнер для Stories */
+.storiesBg {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+/* чтобы контент был поверх */
+.content {
+  position: relative;
+  z-index: 2;
+  /*padding: 24px;*/
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  height: 100%;
+}
+
+.textOverlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 55px;
+  bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.0) 0%,
+          rgba(0, 0, 0, 0.35) 40%,
+          rgba(0, 0, 0, 0.65) 100%
+  );
+}
+
+
+.mobileWrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.textContainer {
+  margin: 30px 0 0 0;
+  width: auto;
+  /*background: linear-gradient(*/
+  /*        to top,*/
+  /*        rgba(0, 0, 0, 0.0) 0%,*/
+  /*        rgba(0, 0, 0, 0.35) 40%,*/
+  /*        rgba(0, 0, 0, 0.65) 100%*/
+  /*);*/
+}
+
+.storiesTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  margin: 30px 0 0 0;
+  z-index: 1;
+  /*background: linear-gradient(*/
+  /*        to top,*/
+  /*        rgba(0, 0, 0, 0.20) 90%,*/
+  /*        rgba(0, 0, 0, 0.35) 0%,*/
+  /*        rgba(0, 0, 0, 0.35) 0%,*/
+  /*        rgba(0, 0, 0, 0.65) 0%*/
+  /*);*/
+
+  color: rgba(255, 255, 255, 1);
+
+}
+
+
+.storiesText {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  margin: 14px 0 0 0;
+  z-index: 1;
+  background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.0) 100%,
+          rgba(0, 0, 0, 0.35) 100%,
+          rgba(0, 0, 0, 0.65) 100%
+  );
+
+  color: rgba(255, 255, 255, 1);
+
+}
+
+
