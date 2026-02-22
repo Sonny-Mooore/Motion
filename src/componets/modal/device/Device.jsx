@@ -124,7 +124,7 @@ export const Device = (props) => {
 
 
           {/* ВЕРСТКА ПОВЕРХ */}
-          {/*<div className={styles.content}>*/}
+          <div className={styles.content}>
           {/*  /!* STORIES вместо VIDEO *!/*/}
 
 
@@ -138,7 +138,7 @@ export const Device = (props) => {
             </div>
           </div>
 
-          {/*</div>*/}
+          </div>
         </div>
       ) : null}
     </div>
