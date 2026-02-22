@@ -20,7 +20,7 @@ export const Device = (props) => {
       content: ({action, isPaused}) => {
         return (
           <video
-            src="/images/device/mobile/1.mp4"
+            src="/images/device/mobile/10sec.mp4"
             autoPlay
             muted
             loop
@@ -35,42 +35,105 @@ export const Device = (props) => {
       }
     },
     {
-      duration: 10000,
+      duration: 5000,
+
       content: ({action, isPaused}) => {
         return (
-          <video
-            src="/images/device/mobile/1.mp4"
-            autoPlay
-            muted
-            loop
-            playsInline
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover"
-            }}
-          />
-        );
-      }
-    }, {
-      duration: 10000,
-      content: ({action, isPaused}) => {
-        return (
-          <video
-            src="/images/device/mobile/1.mp4"
-            autoPlay
-            muted
-            loop
-            playsInline
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover"
-            }}
-          />
+            <video
+                src="/images/device/mobile/5sec.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover"
+                }}
+            />
         );
       }
     },
+    {
+      duration: 7000,
+
+      content: ({action, isPaused}) => {
+        return (
+            <video
+                src="/images/device/mobile/7sec.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover"
+                }}
+            />
+        );
+      }
+    },
+    {
+      duration: 8000,
+
+      content: ({action, isPaused}) => {
+        return (
+            <video
+                src="/images/device/mobile/8.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover"
+                }}
+            />
+        );
+      }
+    },
+    {
+      duration: 3000,
+
+      content: ({action, isPaused}) => {
+        return (
+            <video
+                src="/images/device/mobile/3.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover"
+                }}
+            />
+        );
+      }
+    },
+    {
+      duration: 15000,
+      content: ({action, isPaused}) => {
+        return (
+            <video
+                src="/images/device/mobile/15sec.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover"
+                }}
+            />
+        );
+      }
+    },
+
 
 
   ];
@@ -95,7 +158,8 @@ export const Device = (props) => {
 
       {instructions ? (
         <div className={styles.mobileWrapper}>
-          <div className={styles.storiesBg}>
+
+                    <div className={styles.storiesBg}>
             <Stories
               progressStyles={{
                 background: "rgba(255, 255, 255, 1)",
@@ -123,10 +187,10 @@ export const Device = (props) => {
           </div>
 
 
-          {/* ВЕРСТКА ПОВЕРХ */}
-          <div className={styles.content}>
-          {/*  /!* STORIES вместо VIDEO *!/*/}
 
+          <div className={styles.content}>
+
+              <div className={styles.overlay} />   {/* ← новый слой */}
 
           <div className={styles.textContainer}>
             <div className={styles.storiesTitle}>
