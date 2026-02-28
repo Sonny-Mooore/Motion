@@ -2,6 +2,7 @@ import Header from '@/componets/Header/Header';
 import React, { useState } from 'react';
 
 import styles from './terms.module.css';
+import Device from '@/componets/modal/device/Device';
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -88,6 +89,7 @@ export default function Home() {
           </div>
         </div>
       </main>
+      <Device state={open} handleClosePopup={handleClosePopup} />
     </div>
   );
 }

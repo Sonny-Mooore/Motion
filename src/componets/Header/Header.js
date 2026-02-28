@@ -17,7 +17,7 @@ const Header = (props) => {
 
       <div className={'nav_bg'}>
         <p
-          // onClick={() => go('/')}
+          onClick={() => go('/')}
           className={`nav_item ${isActive('/') ? 'nav_item_is_Active' : ''}`}
         >
           Главная
@@ -49,8 +49,16 @@ const Header = (props) => {
         </p>
       </div>
 
-      <img src={'/images/robot.svg'} className={'robot'} />
-      <img src={'/images/tg.svg'} className={'tg'} />
+      <img
+        onClick={() => router.push('https://t.me/MotionSize')}
+        src={'/images/robot.svg'}
+        className={'robot'}
+      />
+      <img
+        onClick={() => router.push('https://t.me/motionvpnbot')}
+        src={'/images/tg.svg'}
+        className={'tg'}
+      />
     </div>
   );
 };

@@ -16,41 +16,59 @@ const Device = (props) => {
       src: '10sec.mp4',
       title: 'Что, если у меня не грузит Telegram?',
       hasImage: true,
+      hasTextDown: false,
       imageSrc: '/images/device/mobile/1-image.png',
       imageDuration: 6,
+      buttonText: 'Добавить прокси',
       subTitle:
         'У вас не работает Telegram? Добавьте наш бесплатный прокси (можно добавить только при наличии Telegram на девайсе).',
     },
     {
       src: '10sec.mp4',
       title: 'Что, если у меня не грузит Telegram?',
+      buttonText: 'Перейти в бота',
+      hasTextDown: false,
+
       subTitle:
         'У вас не работает Telegram? Добавьте наш бесплатный прокси (можно добавить только при наличии Telegram на девайсе).',
     },
     {
       src: '5sec.mp4',
+      buttonText: 'Перейти в бота',
+      hasTextDown: false,
+
       title: 'Зайдите в Телеграм бота',
       subTitle: 'Нажмите старт и открыть меню чтобы попасть в личный кабинет',
     },
     {
       src: '7sec.mp4',
+      buttonText: 'Перейти в бота',
+      hasTextDown: false,
+
       title: 'Активируйте бесплатную подписку на 7 дней',
       subTitle:
         'Просто нажимайте единственную яркую кнопку в середине — Активировать бесплатно.',
     },
     {
       src: '8.mp4',
+      buttonText: 'Перейти в бота',
+      hasTextDown: false,
+
       title: 'Пару моментов до подключения',
       subTitle:
         'Перейдите в подключить устройства, сайт сам поймёт какое у вас устройство.',
     },
     {
       src: '3.mp4',
+      hasTextDown: true,
+      buttonText: 'Перейти в бота',
       title: 'Выбор устройства',
       subTitle: 'Справа сверху выберите устройство, если вам нужно',
     },
     {
       src: '15sec.mp4',
+      buttonText: 'Перейти в бота',
+      hasTextDown: true,
       title: 'Скачайте приложение',
       subTitle:
         'На выбор может быть две кнопки, нажмите каждую, если скачать с одной ссылки не выходит',
@@ -201,106 +219,91 @@ const Device = (props) => {
       className={`${styles.layer} ${!state ? styles.onClose : ''}`}
       onClick={handleLayerClick}
     >
-      {!instructions ? (
-        <div className={styles.wrapper}>
-          <div
-            onClick={() => setInstructionsOpen(true)}
-            className={styles.main}
-          >
-            <img src="/images/device/pc.svg" alt="pc" />
-            <div className={styles.text}>Как установить на компьютер?</div>
-          </div>
-          <div className={styles.column}>
-            <img src="/images/device/mobile.svg" alt="mobile" />
-          </div>
-        </div>
-      ) : null}
+      <div
+        className={`${styles.mobileWrapper} ${
+          currentSlide?.hasTextDown ? styles.mobileWrapper_text_down : ''
+        }`}
+      >
+        <div
+          className={styles.storiesBg}
+          onMouseDown={handleHoldStart}
+          onMouseUp={handleHoldEnd}
+          onMouseLeave={handleHoldEnd}
+          onTouchStart={handleHoldStart}
+          onTouchEnd={handleHoldEnd}
+          onClick={handleTap}
+        >
+          <div className={styles.progressWrapper}>
+            {videos.map((_, index) => {
+              let width = 0;
+              if (index < current) width = 100;
+              if (index === current) width = progress;
 
-      {instructions ? (
-        <div className={styles.mobileWrapper}>
-          <div
-            className={styles.storiesBg}
-            onMouseDown={handleHoldStart}
-            onMouseUp={handleHoldEnd}
-            onMouseLeave={handleHoldEnd}
-            onTouchStart={handleHoldStart}
-            onTouchEnd={handleHoldEnd}
-            onClick={handleTap}
-          >
-            <div className={styles.progressWrapper}>
-              {videos.map((_, index) => {
-                let width = 0;
-                if (index < current) width = 100;
-                if (index === current) width = progress;
-
-                return (
-                  <div key={index} className={styles.progressBarBg}>
-                    <div
-                      className={styles.progressBar}
-                      style={{ width: `${width}%` }}
-                    />
-                  </div>
-                );
-              })}
-            </div>
-
-            <div className={styles.topGradient} />
-
-            {/* ✅ фикс: item тут не существует, используем videos[current] */}
-            {isImageSlide ? (
-              <img
-                src={currentSlide.imageSrc}
-                alt=""
-                className={styles.storyVideo} // чтобы занимало весь экран как видео (object-fit можно задать в css)
-              />
-            ) : (
-              <video
-                ref={videoRef}
-                key={current}
-                src={`/images/device/mobile/${currentSlide.src}`}
-                muted
-                autoPlay
-                playsInline
-                preload="metadata"
-                className={styles.storyVideo}
-                onLoadedMetadata={handleLoadedMetadata}
-                onTimeUpdate={handleTimeUpdate}
-                onEnded={handleEnded}
-              />
-            )}
-          </div>
-
-          <div className={styles.contentWrapper}>
-            <div className={styles.content}>
-              <div className={styles.overlay} />
-              <div className={styles.textContainer}>
-                <div className={styles.storiesTitle}>{currentSlide.title}</div>
-                <div className={styles.storiesText}>
-                  {currentSlide.subTitle}
-                </div>
-
-                <button
-                  onClick={() =>
-                    router.push(
-                      'https://t.me/proxy?server=proxyone.motion-vpn.com&port=8443&secret=dd5ed2453a7a0eec957d37050b29cc640e',
-                    )
-                  }
-                  className={styles.storiesButton}
-                  type="button"
-                >
-                  Добавить прокси
-                  <img
-                    width={15}
-                    height={12}
-                    src={'/images/device/mobile/lineicons_telegram.svg'}
-                    alt="telegram"
+              return (
+                <div key={index} className={styles.progressBarBg}>
+                  <div
+                    className={styles.progressBar}
+                    style={{ width: `${width}%` }}
                   />
-                </button>
-              </div>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className={styles.topGradient} />
+
+          {/* ✅ фикс: item тут не существует, используем videos[current] */}
+          {isImageSlide ? (
+            <img
+              src={currentSlide.imageSrc}
+              alt=""
+              className={styles.storyVideo} // чтобы занимало весь экран как видео (object-fit можно задать в css)
+            />
+          ) : (
+            <video
+              ref={videoRef}
+              key={current}
+              src={`/images/device/mobile/${currentSlide.src}`}
+              muted
+              autoPlay
+              playsInline
+              preload="metadata"
+              className={styles.storyVideo}
+              onLoadedMetadata={handleLoadedMetadata}
+              onTimeUpdate={handleTimeUpdate}
+              onEnded={handleEnded}
+            />
+          )}
+        </div>
+
+        <div className={styles.contentWrapper}>
+          <div className={styles.content}>
+            <div className={styles.overlay} />
+            <div className={styles.textContainer}>
+              <div className={styles.storiesTitle}>{currentSlide.title}</div>
+              <div className={styles.storiesText}>{currentSlide.subTitle}</div>
+
+              <button
+                onClick={() =>
+                  router.push(
+                    'https://t.me/proxy?server=proxyone.motion-vpn.com&port=8443&secret=dd5ed2453a7a0eec957d37050b29cc640e',
+                  )
+                }
+                className={styles.storiesButton}
+                type="button"
+              >
+                {currentSlide.buttonText}
+                <img
+                  width={15}
+                  height={12}
+                  src={'/images/device/mobile/lineicons_telegram.svg'}
+                  alt="telegram"
+                />
+              </button>
             </div>
           </div>
         </div>
-      ) : null}
+      </div>
     </div>
   );
 };

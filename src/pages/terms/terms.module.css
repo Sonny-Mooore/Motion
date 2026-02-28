@@ -53,7 +53,6 @@
   font-size: 20px;
   font-weight: 700;
   line-height: 141.185%; /* 28.237px */
-
 }
 
 .font_medium {
@@ -62,7 +61,6 @@
   font-size: 18px;
   font-weight: 500;
   line-height: 141.185%; /* 28.237px */
-
 }
 
 .font_SemiBold {
@@ -71,7 +69,6 @@
   font-size: 20px;
   font-weight: 600;
   line-height: 141.185%; /* 28.237px */
-
 }
 
 .font_regular {
@@ -80,7 +77,6 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 141.185%; /* 25.413px */
-
 }
 
 .number {
@@ -91,7 +87,6 @@
   margin-left: 12px;
   line-height: 141.185%; /* 25.413px */
   /* отступ после цифры */
-
 }
 
 .font_SemiBold_Container {
