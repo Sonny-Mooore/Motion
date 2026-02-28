@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import Router from 'next/router';
 import Script from 'next/script';
+import '@/styles/globals.css';
 
 const YM_ID = Number(process.env.NEXT_PUBLIC_YM_ID || '107053828');
 

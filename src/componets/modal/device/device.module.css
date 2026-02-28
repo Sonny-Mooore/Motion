@@ -76,12 +76,21 @@
 
 .mobileWrapper {
   position: relative;
-  width: 390px;
-  height: 824px;
+  width: min(390px, calc(100vw - 32px));
+  height: min(824px, calc(100vh - 40px));
+  max-height: 90vh;
   background: rgba(17, 17, 17, 1);
   overflow: hidden;
   border-radius: 24px;
   z-index: 1;
+}
+
+@media screen and (max-width: 480px) {
+  .mobileWrapper {
+    width: min(390px, calc(100vw - 24px));
+    height: min(824px, calc(100vh - 24px));
+    border-radius: 20px;
+  }
 }
 
 .mobileWrapper_text_down {
@@ -193,8 +202,18 @@
 .textContainer {
   position: relative;
   margin: 30px 0 30px 0;
-  width: 332px;
+  width: 100%;
+  max-width: 332px;
+  padding: 0 20px;
+  box-sizing: border-box;
   z-index: 1;
+}
+
+@media screen and (max-width: 480px) {
+  .textContainer {
+    margin: 20px 0 20px 0;
+    padding: 0 16px;
+  }
 }
 
 .storiesTitle {
@@ -215,9 +234,11 @@
 
 .storiesButton {
   display: flex;
-  width: 337px;
+  width: 100%;
+  max-width: 337px;
   cursor: pointer;
   height: 57px;
+  box-sizing: border-box;
 
   padding: 8px 12px;
   justify-content: center;
@@ -246,6 +267,30 @@
 .contentWrapper {
   display: flex;
   justify-content: left;
+}
+
+@media screen and (max-width: 480px) {
+  .storiesTitle {
+    font-size: 18px;
+    margin: 20px 0 0 0;
+  }
+
+  .storiesText {
+    font-size: 15px;
+    margin: 10px 0 0 0;
+  }
+
+  .storiesButton {
+    height: 52px;
+    font-size: 16px;
+    margin: 18px 0 0 0;
+  }
+
+  .progressWrapper {
+    top: 16px;
+    left: 8%;
+    width: 84%;
+  }
 }
 
 /*.vector_left {*/
