@@ -1,7 +1,7 @@
 import Header from '@/componets/Header/Header';
 import React, { useState } from 'react';
 import Device from '@/componets/modal/device/Device';
-import {router} from "next/client";
+import { router } from 'next/client';
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -23,11 +23,12 @@ export default function Home() {
         <div className={'title_container'}>
           <h1 className={'title'}>Motion — включай мир на полную</h1>
           <div className={'subtitle'}>
-            Быстрые сервера в актуальных точках мира, стабильное подключение и бесплатный недельный период в два клика
+            Быстрые сервера в актуальных точках мира, стабильное подключение и
+            бесплатный недельный период в два клика
           </div>
           <div className="glass_button_container">
             <button
-              onClick={()=> router.push("https://t.me/motionvpnbot")}
+              onClick={() => router.push('https://t.me/motionvpnbot')}
               className="glass_button"
               onMouseMove={(e) => {
                 const rect = e.currentTarget.getBoundingClientRect();
@@ -39,7 +40,7 @@ export default function Home() {
               }}
             >
               Подключить
-              <img alt={""} src={"/images/Vector.svg"}/>
+              <img alt={''} src={'/images/Vector.svg'} />
             </button>
             <img
               width={109}

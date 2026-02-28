@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import styles from './device.module.css';
-import {router} from "next/client";
+import { router } from 'next/client';
 
 const Device = (props) => {
   const { state, handleClosePopup } = props;
@@ -203,7 +203,10 @@ const Device = (props) => {
     >
       {!instructions ? (
         <div className={styles.wrapper}>
-          <div onClick={() => setInstructionsOpen(true)} className={styles.main}>
+          <div
+            onClick={() => setInstructionsOpen(true)}
+            className={styles.main}
+          >
             <img src="/images/device/pc.svg" alt="pc" />
             <div className={styles.text}>Как установить на компьютер?</div>
           </div>
@@ -272,9 +275,19 @@ const Device = (props) => {
               <div className={styles.overlay} />
               <div className={styles.textContainer}>
                 <div className={styles.storiesTitle}>{currentSlide.title}</div>
-                <div className={styles.storiesText}>{currentSlide.subTitle}</div>
+                <div className={styles.storiesText}>
+                  {currentSlide.subTitle}
+                </div>
 
-                <button onClick={()=> router.push("https://t.me/proxy?server=proxyone.motion-vpn.com&port=8443&secret=dd5ed2453a7a0eec957d37050b29cc640e") } className={styles.storiesButton} type="button">
+                <button
+                  onClick={() =>
+                    router.push(
+                      'https://t.me/proxy?server=proxyone.motion-vpn.com&port=8443&secret=dd5ed2453a7a0eec957d37050b29cc640e',
+                    )
+                  }
+                  className={styles.storiesButton}
+                  type="button"
+                >
                   Добавить прокси
                   <img
                     width={15}

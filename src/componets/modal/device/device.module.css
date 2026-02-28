@@ -13,7 +13,6 @@
   gap: 15px;
 }
 
-
 .wrapper {
   display: flex;
   align-items: center;
@@ -135,7 +134,7 @@
 
 .progressBarBg {
   flex: 1;
-  height: 6px;
+  height: 8px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   overflow: hidden;
@@ -224,7 +223,6 @@
 .contentWrapper {
   display: flex;
   justify-content: left;
-
 }
 
 /*.vector_left {*/

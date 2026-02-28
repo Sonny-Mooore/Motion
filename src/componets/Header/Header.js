@@ -27,22 +27,22 @@ const Header = (props) => {
           onClick={() => {
             handleClosePopup?.();
             // если инструкции — это отдельная страница, поменяй на нужный путь:
-            // go('/instructions');
+            // go('/terms');
           }}
-          className={`nav_item ${isActive('/instructions') ? 'nav_item_is_Active' : ''}`}
+          className={`nav_item`}
         >
           Инструкции
         </p>
 
         <p
-          // onClick={() => go('/terms')}
+          onClick={() => router.push('/terms')}
           className={`nav_item ${isActive('/terms') ? 'nav_item_is_Active' : ''}`}
         >
           Правила использования
         </p>
 
         <p
-          // onClick={() => go('/privacy')}
+          onClick={() => go('/privacy')}
           className={`nav_item ${isActive('/privacy') ? 'nav_item_is_Active' : ''}`}
         >
           Политика кондифициальности
