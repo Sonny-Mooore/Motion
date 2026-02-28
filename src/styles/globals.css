@@ -133,6 +133,23 @@ button {
   transform: translateX(-50%);
   max-width: min(100vw, 1220px);
 }
+.background_mobile {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .background_mobile {
+    display: block;
+    object-fit: contain;
+    position: fixed;
+    bottom: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .background {
+    display: none;
+  }
+}
 
 @media screen and (max-width: 640px) {
   .background {
