@@ -53,6 +53,7 @@ const Header = (props) => {
           </p>
         </div>
 
+        <div className='icon_button_container'>
         <img
           onClick={() => router.push('https://t.me/MotionSize')}
           src={'/images/robot.svg'}
@@ -71,12 +72,22 @@ const Header = (props) => {
           onClick={openBurger}
           aria-label="Открыть меню"
         >
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden>
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            aria-hidden
+          >
             <line x1="4" y1="8" x2="20" y2="8" />
             <line x1="4" y1="16" x2="20" y2="16" />
             <line x1="4" y1="12" x2="20" y2="12" />
           </svg>
         </button>
+        </div>
       </div>
 
       <BurgerMenu
