@@ -295,7 +295,7 @@ const Device = (props) => {
                 {currentSlide.buttonText}
                 <img
                   width={15}
-                  height={12}
+                  height={15}
                   src={'/images/device/mobile/lineicons_telegram.svg'}
                   alt="telegram"
                 />
