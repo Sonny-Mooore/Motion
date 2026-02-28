@@ -51,11 +51,7 @@ export default function Home() {
             />
           </div>
 
-          {/*<div className={"glass_button_container"}>*/}
-          {/*  <button className={"glass_button"} disabled>*/}
-          {/*  Подключить*/}
-          {/*  </button>*/}
-          {/*</div>*/}
+
         </div>
       </main>
 

@@ -395,17 +395,9 @@ h5 {
   right: -200px;
   width: 684px;
   height: 684px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(235, 40, 0, 0.35) 0%,
-    rgba(235, 40, 0, 0.18) 40%,
-    rgba(235, 40, 0, 0.08) 70%,
-    transparent 100%
-  );
-  filter: blur(250px);
-  z-index: -1;
-  pointer-events: none;
+  border-radius: 684px;
+  background: #D12600;
+  filter: blur(350px);
 }
 
 .blur-2 {
@@ -414,15 +406,9 @@ h5 {
   left: -332px;
   width: 1178px;
   height: 1178px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(235, 40, 0, 0.35) 0%,
-    rgba(235, 40, 0, 0.18) 40%,
-    rgba(235, 40, 0, 0.08) 70%,
-    transparent 100%
-  );
-  filter: blur(250px);
+  border-radius: 1178px;
+  background: #D12600;
+  filter: blur(630px);
   z-index: -1;
   pointer-events: none;
 }
