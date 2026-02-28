@@ -40,7 +40,7 @@ export default function Home() {
       <Header handleClosePopup={handleClosePopup} />
       <img
         className="background"
-        src="/images/background.png"
+        src="/images/background.svg"
         alt="background"
       />
       <div className={'title_container'}>

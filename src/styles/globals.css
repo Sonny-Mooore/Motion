@@ -607,33 +607,17 @@ button {
 
 @media screen and (max-width: 880px) {
   .blur-1 {
+    width: 200px;
+    height: 200px;
+    right: -200px;
+    filter: blur(150px);
+  }
+
+  .blur-2 {
     width: 400px;
     height: 400px;
-    right: -200px;
-    filter: blur(220px);
-  }
-
-  .blur-2 {
-    width: 700px;
-    height: 700px;
     left: -350px;
     top: 50%;
-    filter: blur(400px);
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .blur-1 {
-    width: 280px;
-    height: 280px;
-    right: -120px;
-    filter: blur(180px);
-  }
-
-  .blur-2 {
-    width: 500px;
-    height: 500px;
-    left: -250px;
-    filter: blur(320px);
+    filter: blur(200px);
   }
 }

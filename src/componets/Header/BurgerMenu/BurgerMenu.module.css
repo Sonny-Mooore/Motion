@@ -59,11 +59,12 @@
   color: #fff;
   font-weight: 600;
   letter-spacing: 2px;
-  background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.07);
   cursor: pointer;
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
+
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .menuLogo img {
@@ -77,8 +78,8 @@
 }
 
 .menuIconBtn {
-  width: 44px;
-  height: 44px;
+  width: 52px;
+  height: 52px;
   padding: 10px;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.02);
@@ -102,12 +103,11 @@
 
 .sectionTitle {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.6);
-  text-transform: uppercase;
   letter-spacing: 1px;
   margin: 0 0 16px 0;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .navList {
@@ -122,14 +122,11 @@
 
 .navLink {
   display: block;
-  padding: 14px 0;
+  padding: 24px 0 12px 0;
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: #fff;
-  text-decoration: none;
-  cursor: pointer;
-  transition: color 0.2s ease;
+  color: #989898;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .navLink:hover {
@@ -138,12 +135,13 @@
 
 .supportList {
   list-style: none;
-  padding: 0;
+  padding: 0 0 0 0;
   margin: 0;
 }
 
 .supportItem {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0 0 0 0;
 }
 
 .supportLink {
@@ -151,13 +149,14 @@
   align-items: center;
   gap: 12px;
   padding: 14px 0;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: #fff;
+
   text-decoration: none;
   cursor: pointer;
   transition: color 0.2s ease;
+  color: #989898;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .supportLink:hover {
@@ -173,4 +172,33 @@
 
 .supportItem:last-child .supportLink {
   border-bottom: none;
+}
+
+.tg_icon {
+  display: block;
+}
+.robot_icon {
+  display: block;
+}
+
+.tg_black {
+  display: none;
+}
+.robot_black {
+  display: none;
+}
+
+@media screen and (max-width: 1290px) {
+  .tg_icon {
+    display: none;
+  }
+  .robot_icon {
+    display: none;
+  }
+  .tg_black {
+    display: block;
+  }
+  .robot_black {
+    display: block;
+  }
 }
