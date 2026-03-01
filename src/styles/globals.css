@@ -133,7 +133,7 @@ button {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -8vw;
+  bottom: -116px;
 
   width: 70vw;
   max-width: 1220px;
