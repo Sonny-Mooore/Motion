@@ -197,8 +197,8 @@ button {
 
 @media (max-width: 380px) {
   .background_mobile {
-    width: 95vw;
-    bottom: -23vw;
+    width: 93vw;
+    bottom: -58vw;
   }
 }
 
@@ -480,7 +480,7 @@ button {
 
 @media screen and (max-width: 880px) {
   .title_container {
-    margin-top: 76px;
+    margin-top: 126px;
   }
 
   .title {
@@ -494,7 +494,7 @@ button {
 
 @media screen and (max-width: 640px) {
   .title_container {
-    margin-top: 62px;
+    /* margin-top: 62px; */
     gap: 8px;
   }
 
@@ -509,7 +509,7 @@ button {
 
 @media screen and (max-width: 480px) {
   .title_container {
-    margin-top: 50px;
+    /* margin-top: 50px; */
   }
 
   .title {
