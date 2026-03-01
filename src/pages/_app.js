@@ -3,7 +3,7 @@ import Router from 'next/router';
 import Script from 'next/script';
 import '@/styles/globals.css';
 
-const YM_ID = Number(process.env.NEXT_PUBLIC_YM_ID || '107053828');
+
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
@@ -30,7 +30,7 @@ export default function App({ Component, pageProps }) {
             k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
             (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-            ym(${YM_ID}, "init", {
+            ym(107053828, "init", {
               defer: true,
               clickmap:true,
               trackLinks:true,
