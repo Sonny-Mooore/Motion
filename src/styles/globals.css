@@ -433,7 +433,7 @@ button {
   .title_container {
     margin-top: 32px;
     gap: 8px;
-    padding: 0 12px;
+    /* padding: 0 12px; */
   }
 
   .title {
