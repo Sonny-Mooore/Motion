@@ -214,8 +214,8 @@ button {
 
 @media (max-width: 380px) {
   .background_mobile {
-    width: 93vw;
-    bottom: -78vw;
+    width: 79vw;
+    bottom: -70vw;
   }
 }
 
