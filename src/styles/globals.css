@@ -44,8 +44,8 @@
 img {
   margin: 0;
   padding: 0;
-  pointer-events: none; 
-  user-select: none; 
+  pointer-events: none;
+  user-select: none;
 }
 
 html,
@@ -54,8 +54,8 @@ body {
   font-family: 'Montserrat', sans-serif;
   padding: 0;
   background: rgba(15, 15, 15, 1);
-  /* min-height: 100%; */
-  overflow: hidden;
+  overflow: hidden; /* полностью убираем скролл */
+  overscroll-behavior: none;
 }
 
 @media screen and (max-width: 880px) {
@@ -198,7 +198,7 @@ button {
 @media (max-width: 380px) {
   .background_mobile {
     width: 95vw;
-    bottom: -25vw;
+    bottom: -23vw;
   }
 }
 
@@ -509,7 +509,7 @@ button {
 
 @media screen and (max-width: 480px) {
   .title_container {
-    margin-top: 46px;
+    margin-top: 52px;
   }
 
   .title {
