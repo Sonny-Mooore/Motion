@@ -7,10 +7,6 @@ const Device = (props) => {
 
   const [instructions, setInstructionsOpen] = useState(false);
 
-  // ✅ теперь у слайда может быть видео ИЛИ картинка
-  // hasImage: true -> показываем картинку вместо видео
-  // imageSrc: путь к картинке
-  // imageDuration: длительность показа картинки (сек), чтобы прогресс шёл и автопереключение работало
   const videos = [
     {
       src: '10sec.mp4',
@@ -22,41 +18,83 @@ const Device = (props) => {
       buttonText: 'Добавить прокси',
       subTitle:
         'У вас не работает Telegram? Добавьте наш бесплатный прокси (можно добавить только при наличии Telegram на девайсе).',
+  
+      bg: `linear-gradient(
+             to bottom,
+             #111 0%,
+             rgba(17, 17, 17, 0.91) 45.54%,
+             rgba(17, 17, 17, 0) 53.52%
+           ),
+           rgba(255, 255, 255, 0.02)`,
     },
     {
       src: '10sec.mp4',
       title: 'Что, если у меня не грузит Telegram?',
       buttonText: 'Перейти в бота',
       hasTextDown: false,
-
       subTitle:
         'У вас не работает Telegram? Добавьте наш бесплатный прокси (можно добавить только при наличии Telegram на девайсе).',
+  
+      bg: `linear-gradient(
+             to bottom,
+             #111 0%,
+             rgba(17, 17, 17, 0.70) 10.9%,
+             rgba(17, 17, 17, 0) 12.8%
+           ),
+           rgba(255, 255, 255, 0.02)`,
     },
     {
       src: '5sec.mp4',
       buttonText: 'Перейти в бота',
       hasTextDown: false,
-
       title: 'Зайдите в Телеграм бота',
       subTitle: 'Нажмите старт и открыть меню чтобы попасть в личный кабинет',
+  
+      bg: `linear-gradient(
+             to bottom,
+             #111 0%,
+             rgba(17, 17, 17, 0.84) 27.06%,
+             rgba(17, 17, 17, 0) 31.8%
+           ),
+           rgba(255, 255, 255, 0.02)`,
     },
     {
       src: '7sec.mp4',
       buttonText: 'Перейти в бота',
       hasTextDown: false,
-
       title: 'Активируйте бесплатную подписку на 7 дней',
       subTitle:
         'Просто нажимайте единственную яркую кнопку в середине — Активировать бесплатно.',
+  
+      bg: `linear-gradient(
+             to bottom,
+             #111 0%,
+             rgba(17, 17, 17, 0.84) 27.06%,
+             rgba(17, 17, 17, 0) 31.8%
+           ),
+           rgba(255, 255, 255, 0.02)`,
     },
     {
       src: '8.mp4',
       buttonText: 'Перейти в бота',
       hasTextDown: false,
-
       title: 'Пару моментов до подключения',
       subTitle:
         'Перейдите в подключить устройства, сайт сам поймёт какое у вас устройство.',
+  
+      bg: `linear-gradient(
+             to top,
+             #111 0%,
+             rgba(17, 17, 17, 0.83) 12.98%,
+             rgba(17, 17, 17, 0) 19.84%
+           ),
+           linear-gradient(
+             to bottom,
+             #111 0%,
+             rgba(17, 17, 17, 0.85) 6.78%,
+             rgba(17, 17, 17, 0) 12.56%
+           ),
+           rgba(255, 255, 255, 0.02)`,
     },
     {
       src: '3.mp4',
@@ -64,6 +102,14 @@ const Device = (props) => {
       buttonText: 'Перейти в бота',
       title: 'Выбор устройства',
       subTitle: 'Справа сверху выберите устройство, если вам нужно',
+    
+      bg: `linear-gradient(
+             to top,
+             #111 0%,
+             rgba(17, 17, 17, 0.83) 20.28%,
+             rgba(17, 17, 17, 0) 31.01%
+           ),
+           rgba(255, 255, 255, 0.02)`,
     },
     {
       src: '15sec.mp4',
@@ -72,6 +118,14 @@ const Device = (props) => {
       title: 'Скачайте приложение',
       subTitle:
         'На выбор может быть две кнопки, нажмите каждую, если скачать с одной ссылки не выходит',
+    
+      bg: `linear-gradient(
+             to top,
+             #111 0%,
+             rgba(17, 17, 17, 0.95) 30.13%,
+             rgba(17, 17, 17, 0) 38.29%
+           ),
+           rgba(255, 255, 255, 0.02)`,
     },
   ];
 
@@ -226,6 +280,7 @@ const Device = (props) => {
       >
         <div
           className={styles.storiesBg}
+          style={{ background: currentSlide.bg }}
           onMouseDown={handleHoldStart}
           onMouseUp={handleHoldEnd}
           onMouseLeave={handleHoldEnd}
