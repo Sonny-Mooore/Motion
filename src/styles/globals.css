@@ -232,7 +232,6 @@ button {
     transform: translateX(-50%) translateY(clamp(35px, 7vh, 100px));
   }
 }
-
 @media (max-height: 720px) {
   .background {
     max-height: min(50vh, 540px);
@@ -803,8 +802,8 @@ button {
   .blur-2 {
     width: 400px;
     height: 400px;
-    left: -20px;
-    top: 50%;
-    filter: blur(200px);
+    left: -25px;
+    top: 70%;
+    filter: blur(150px);
   }
 }
