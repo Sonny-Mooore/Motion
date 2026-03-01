@@ -802,7 +802,7 @@ button {
   .blur-2 {
     width: 400px;
     height: 400px;
-    left: -35px;
+    left: -145px;
     top: 70%;
     filter: blur(150px);
   }
