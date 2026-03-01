@@ -135,17 +135,21 @@ button {
 }
 .background_mobile {
   display: none;
+
 }
 
 @media screen and (max-width: 800px) {
   .background_mobile {
     display: block;
-    object-fit: contain;
     position: fixed;
-    bottom: -120px;
+    bottom: -150px; 
     left: 50%;
     transform: translateX(-50%);
-    max-width: min(100vw, 800px);
+    
+    width: 90vw;        
+    max-width: 800px;   
+    height: auto;
+    object-fit: contain;
   }
   .background {
     display: none;
