@@ -189,10 +189,10 @@ button {
     transform: translateX(-50%);
 
     width: 92vw;
-    max-width: 430px;
+    max-width: 390px;
     height: auto;
 
-    bottom: -18vw;
+    bottom: -27vw;
 
     object-fit: contain;
   }
@@ -206,7 +206,7 @@ button {
 @media (max-width: 380px) {
   .background_mobile {
     width: 95vw;
-    bottom: -22vw;
+    bottom: -25vw;
   }
 }
 
