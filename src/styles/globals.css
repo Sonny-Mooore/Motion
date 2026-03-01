@@ -55,6 +55,10 @@ body {
   /* min-height: 100%; */
   overflow: hidden;
 }
+img {
+  pointer-events: none; 
+  user-select: none; 
+}
 
 @media screen and (max-width: 880px) {
   html,
@@ -192,7 +196,6 @@ button {
     object-fit: contain;
   }
 }
-
 
 @media (max-width: 380px) {
   .background_mobile {
