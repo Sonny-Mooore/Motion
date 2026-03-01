@@ -27,7 +27,7 @@ export default function Home() {
     <>
       <Head>
         <title>
-          Motion VPN — быстрый VPN для TikTok Mod, телефона, ПК и Smart TV
+          Motion — стабильный и быстрый сервис всех устройств
         </title>
         <meta
           name="description"
