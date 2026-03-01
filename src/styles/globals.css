@@ -189,7 +189,7 @@ button {
     width: 80vw;
     max-width: 380px;
     height: auto;
-    bottom: -68vw;
+    bottom: -38vw;
 
     object-fit: contain;
   }
@@ -526,7 +526,7 @@ button {
 
 @media screen and (max-width: 480px) {
   .title_container {
-    margin-top: 50px;
+    margin-top: 110px;
   }
 
   .title {
