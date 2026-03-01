@@ -146,7 +146,7 @@ button {
     left: 50%;
     transform: translateX(-50%);
     
-    width: 75vw;        
+    width: 60vw;        
     max-width: 800px;   
     height: auto;
     object-fit: contain;
