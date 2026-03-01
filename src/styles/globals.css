@@ -796,13 +796,13 @@ button {
     width: 200px;
     height: 200px;
     right: -20px;
-    filter: blur(150px);
+    filter: blur(80px);
   }
 
   .blur-2 {
     width: 400px;
     height: 400px;
-    left: -25px;
+    left: -35px;
     top: 70%;
     filter: blur(150px);
   }
