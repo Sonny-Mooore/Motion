@@ -135,8 +135,8 @@ button {
   transform: translateX(-50%);
   bottom: -8vw;
 
-  width: 65vw;
-  max-width: 1020px;
+  width: 75vw;
+  /* max-width: 1020px; */
   height: auto;
 
   object-fit: contain;
@@ -187,7 +187,7 @@ button {
     width: 80vw;
     max-width: 380px;
     height: auto;
-    bottom: -48vw;
+    bottom: -68vw;
 
     object-fit: contain;
   }
