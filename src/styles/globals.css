@@ -124,48 +124,94 @@ button {
     padding: 0 12px;
   }
 }
+/* =====================================================
+   DESKTOP
+===================================================== */
 
 .background {
-  object-fit: contain;
   position: fixed;
-  bottom: -120px;
   left: 50%;
   transform: translateX(-50%);
- 
-  width: auto;
-  width: min(80vw, 1020px);   
-  height: auto;
-  max-height: 80vh;            
+  bottom: -120px;
 
+  width: 1020px;
+  height: auto;
   object-fit: contain;
 }
-.background_mobile {
-  display: none;
 
+
+/* =====================================================
+   LAPTOP / SMALL DESKTOP
+===================================================== */
+
+@media (max-width: 1440px) {
+  .background {
+    width: 920px;
+    bottom: -130px;
+  }
 }
 
-@media screen and (max-width: 800px) {
-  .background_mobile {
-    display: block;
-    position: fixed;
-    bottom: -150px; 
-    left: 50%;
-    transform: translateX(-50%);
-    
-    width: 375px;        
-    max-width: 800px;   
-    height: auto;
-    object-fit: contain;
+
+/* =====================================================
+   TABLET LANDSCAPE (например 1180x820)
+===================================================== */
+
+@media (max-width: 1180px) and (orientation: landscape) {
+  .background {
+    width: 820px;
+    bottom: -150px;
   }
+}
+
+
+/* =====================================================
+   TABLET PORTRAIT (например 820x1180 как iPad Air)
+===================================================== */
+
+@media (max-width: 900px) and (orientation: portrait) {
+  .background {
+    width: 700px;
+    bottom: -190px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE (другая картинка)
+===================================================== */
+
+.background_mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
   .background {
     display: none;
   }
+
+  .background_mobile {
+    display: block;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -150px;
+
+    width: 430px;
+    height: auto;
+    object-fit: contain;
+  }
 }
 
-@media screen and (max-width: 640px) {
-  .background {
-    bottom: -60px;
-    max-width: 140%;
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+  .background_mobile {
+    width: 390px;
+    bottom: -170px;
   }
 }
 
