@@ -194,11 +194,28 @@ button {
     object-fit: contain;
   }
 }
+@media (max-width: 550) {
+  .background_mobile {
+    display: block;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+
+    max-width: 390px;
+
+    width: 80vw;
+    max-width: 380px;
+    height: auto;
+    bottom: -18vw;
+
+    object-fit: contain;
+  }
+}
 
 @media (max-width: 380px) {
   .background_mobile {
     width: 93vw;
-    bottom: -58vw;
+    bottom: -78vw;
   }
 }
 
@@ -509,7 +526,7 @@ button {
 
 @media screen and (max-width: 480px) {
   .title_container {
-    /* margin-top: 50px; */
+    margin-top: 50px;
   }
 
   .title {

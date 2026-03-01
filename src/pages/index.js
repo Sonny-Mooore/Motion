@@ -55,7 +55,8 @@ export default function Home() {
                 const y = e.clientY - rect.top;
                 e.currentTarget.style.setProperty('--x', `${x}px`);
                 e.currentTarget.style.setProperty('--y', `${y}px`);
-              }}>
+              }}
+>
               Подключить
               <img alt={''} src={'/images/Vector.svg'} />
             </button>
