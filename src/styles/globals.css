@@ -85,7 +85,7 @@ button {
 .page {
   position: relative;
   isolation: isolate;
-  height: 100vh;   
+  /* height: 100vh;    */
 }
 
 .bg {
