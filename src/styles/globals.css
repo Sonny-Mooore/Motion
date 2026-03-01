@@ -195,23 +195,23 @@ button {
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
-    bottom: -150px;
-
-    width: 430px;
-    height: auto;
+    
+    bottom: -90px;   /* 👈 было слишком низко */
+    
+    width: 360px;    /* 👈 уменьшаем ширину */
+    height: 520px;   /* 👈 уменьшаем высоту */
+    
     object-fit: contain;
   }
 }
 
 
-/* =====================================================
-   SMALL MOBILE
-===================================================== */
-
+/* маленькие телефоны */
 @media (max-width: 380px) {
   .background_mobile {
-    width: 390px;
-    bottom: -170px;
+    width: 330px;
+    height: 480px;
+    bottom: -95px;
   }
 }
 
