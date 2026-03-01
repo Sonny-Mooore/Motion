@@ -1,10 +1,9 @@
-
 .layer {
   position: fixed;
   inset: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.30);
+  background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(4px);
   z-index: 9999;
   pointer-events: auto;
@@ -19,11 +18,10 @@
   display: none;
 }
 
-
 .content {
   display: flex;
   width: 100%;
-  max-width: 312px;
+  max-width: 362px;
   margin: 0 16px;
   padding: 24px;
   flex-direction: column;
@@ -31,7 +29,7 @@
   align-items: center;
   gap: 24px;
   border-radius: 18px;
-  border: 1.093px solid #FFF;
+  border: 1.093px solid rgba(255, 255, 255, 0.1);
   background: rgba(0, 0, 0, 0.02);
   backdrop-filter: blur(25px);
   box-sizing: border-box;
@@ -50,7 +48,7 @@
   text-align: start;
   width: 100%;
   font-family: 'Montserrat', sans-serif;
-  color: #FFF;
+  color: #fff;
   font-size: 20px;
   font-weight: 700;
 }
@@ -106,7 +104,6 @@
   font-weight: 400;
 }
 
-
 .storiesButton {
   display: flex;
   width: 100%;
@@ -121,15 +118,21 @@
   border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0);
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(10px);
 
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-family: Montserrat, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  transition: all ease 0.1s;
+}
+.storiesButton:hover {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .storiesButton:focus {

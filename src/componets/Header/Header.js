@@ -54,18 +54,28 @@ const Header = (props) => {
         </div>
 
         <div className="icon_button_container">
-          <img
+          <button
+            type="button"
+            className="icon_btn"
             onClick={() => router.push('https://t.me/MotionSize')}
-            src={'/images/robot.svg'}
-            className={'robot'}
-            alt=""
-          />
-          <img
-            onClick={() => router.push('https://t.me/motionvpnbot')}
-            src={'/images/tg.svg'}
-            className={'tg'}
-            alt=""
-          />
+            aria-label="MotionSize"
+          >
+            <img src={'/images/robot.svg'}  alt="" />
+          </button>
+
+          <button
+            type="button"
+            className="icon_btn"
+            onClick={() => router.push('https://t.me/MotionSize')}
+            aria-label="MotionSize"
+          >
+            <img
+              onClick={() => router.push('https://t.me/motionvpnbot')}
+              src={'/images/tg.svg'}
+              alt=""
+            />
+          </button>
+
           <button
             type="button"
             className="burger_btn"

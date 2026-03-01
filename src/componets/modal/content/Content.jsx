@@ -9,7 +9,6 @@ export const Content = (props) => {
       className={`${styles.layer} ${!isContentOpen ? styles.onClose : ''}`}
       onClick={handleContentPopupClose}
     >
-      {/* ✅ чтобы клики внутри не закрывали модалку */}
       <div className={styles.content} onClick={(e) => e.stopPropagation()}>
         <div className={styles.font_bold}>Ой, вы у нас первый раз!</div>
 
