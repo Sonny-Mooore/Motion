@@ -494,7 +494,7 @@ button {
 
 @media screen and (max-width: 640px) {
   .title_container {
-    margin-top: 52px;
+    margin-top: 72px;
     gap: 8px;
   }
 
@@ -509,7 +509,7 @@ button {
 
 @media screen and (max-width: 480px) {
   .title_container {
-    margin-top: 52px;
+    margin-top: 50px;
   }
 
   .title {
