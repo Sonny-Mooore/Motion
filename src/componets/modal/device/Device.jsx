@@ -5,8 +5,6 @@ import { router } from 'next/client';
 const Device = (props) => {
   const { state, handleClosePopup } = props;
 
-  const [instructions, setInstructionsOpen] = useState(false);
-
   const videos = [
     {
       src: '10sec.mp4',
@@ -18,7 +16,7 @@ const Device = (props) => {
       buttonText: 'Добавить прокси',
       subTitle:
         'У вас не работает Telegram? Добавьте наш бесплатный прокси (можно добавить только при наличии Telegram на девайсе).',
-  
+
       bg: `linear-gradient(
              to bottom,
              #111 0%,
@@ -34,7 +32,7 @@ const Device = (props) => {
       hasTextDown: false,
       subTitle:
         'У вас не работает Telegram? Добавьте наш бесплатный прокси (можно добавить только при наличии Telegram на девайсе).',
-  
+
       bg: `linear-gradient(
              to bottom,
              #111 0%,
@@ -49,7 +47,7 @@ const Device = (props) => {
       hasTextDown: false,
       title: 'Зайдите в Телеграм бота',
       subTitle: 'Нажмите старт и открыть меню чтобы попасть в личный кабинет',
-  
+
       bg: `linear-gradient(
              to bottom,
              #111 0%,
@@ -65,7 +63,7 @@ const Device = (props) => {
       title: 'Активируйте бесплатную подписку на 7 дней',
       subTitle:
         'Просто нажимайте единственную яркую кнопку в середине — Активировать бесплатно.',
-  
+
       bg: `linear-gradient(
              to bottom,
              #111 0%,
@@ -81,14 +79,8 @@ const Device = (props) => {
       title: 'Пару моментов до подключения',
       subTitle:
         'Перейдите в подключить устройства, сайт сам поймёт какое у вас устройство.',
-  
+
       bg: `linear-gradient(
-             to top,
-             #111 0%,
-             rgba(17, 17, 17, 0.83) 12.98%,
-             rgba(17, 17, 17, 0) 19.84%
-           ),
-           linear-gradient(
              to bottom,
              #111 0%,
              rgba(17, 17, 17, 0.85) 6.78%,
@@ -102,9 +94,9 @@ const Device = (props) => {
       buttonText: 'Перейти в бота',
       title: 'Выбор устройства',
       subTitle: 'Справа сверху выберите устройство, если вам нужно',
-    
+
       bg: `linear-gradient(
-             to top,
+             to bottom,
              #111 0%,
              rgba(17, 17, 17, 0.83) 20.28%,
              rgba(17, 17, 17, 0) 31.01%
@@ -118,14 +110,22 @@ const Device = (props) => {
       title: 'Скачайте приложение',
       subTitle:
         'На выбор может быть две кнопки, нажмите каждую, если скачать с одной ссылки не выходит',
-    
-      bg: `linear-gradient(
-             to top,
-             #111 0%,
-             rgba(17, 17, 17, 0.95) 30.13%,
-             rgba(17, 17, 17, 0) 38.29%
-           ),
-           rgba(255, 255, 255, 0.02)`,
+
+      bg: `
+        linear-gradient(
+          to bottom,
+          #111 0%,
+          rgba(17, 17, 17, 0.95) 80.13%,
+          rgba(17, 17, 17, 0) 88.29%
+        ),
+        linear-gradient(
+          to top,
+          #111 0%,
+          rgba(17, 17, 17, 0.95) 80.13%,
+          rgba(17, 17, 17, 0) 88.29%
+        ),
+        rgba(255, 255, 255, 0.02)
+      `,
     },
   ];
 
@@ -154,12 +154,10 @@ const Device = (props) => {
     setCurrent((prev) => (prev > 0 ? prev - 1 : 0));
   }, []);
 
-  // ✅ управление видео: не пытаемся play() на слайде-картинке
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
 
-    // если сейчас картинка — стопаем видео (если вдруг было)
     if (isImageSlide) {
       try {
         video.pause();
@@ -175,9 +173,7 @@ const Device = (props) => {
     }
   }, [isPaused, current, isImageSlide]);
 
-  // ✅ таймер прогресса для слайда-картинки (и автопереход)
   useEffect(() => {
-    // чистим предыдущий таймер
     if (imageTimerRef.current) {
       clearInterval(imageTimerRef.current);
       imageTimerRef.current = null;
@@ -198,7 +194,6 @@ const Device = (props) => {
       }
 
       if (pausedAt) {
-        // сдвигаем start на длительность паузы
         start += Date.now() - pausedAt;
         pausedAt = null;
       }
@@ -228,7 +223,7 @@ const Device = (props) => {
   };
 
   const handleTimeUpdate = (e) => {
-    if (isImageSlide) return; // на картинке прогресс ведёт таймер
+    if (isImageSlide) return;
     const v = e.currentTarget;
     const d = v.duration || duration;
 
@@ -307,12 +302,11 @@ const Device = (props) => {
 
           <div className={styles.topGradient} />
 
-          {/* ✅ фикс: item тут не существует, используем videos[current] */}
           {isImageSlide ? (
             <img
               src={currentSlide.imageSrc}
               alt=""
-              className={styles.storyVideo} // чтобы занимало весь экран как видео (object-fit можно задать в css)
+              className={styles.storyVideo}
             />
           ) : (
             <video

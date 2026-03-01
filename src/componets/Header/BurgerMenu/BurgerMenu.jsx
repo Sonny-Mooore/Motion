@@ -49,22 +49,7 @@ const BurgerMenu = ({ isOpen, onClose, onInstructions }) => {
             <img src="/images/logo.svg" width={112} height={22} alt="Motion" />
           </a>
           <div className={styles.menuIcons}>
-            {/* <button
-              type="button"
-              className={styles.menuIconBtn}
-              onClick={() => goExternal('https://t.me/MotionSize')}
-              aria-label="Канал Telegram"
-            >
-              <img src="/images/robot.svg" alt="" />
-            </button>
-            <button
-              type="button"
-              className={styles.menuIconBtn}
-              onClick={() => goExternal('https://t.me/motionvpnbot')}
-              aria-label="Бот Telegram"
-            >
-              <img src="/images/tg.svg" alt="" />
-            </button> */}
+           
             <button
               type="button"
               className={styles.menuIconBtn}

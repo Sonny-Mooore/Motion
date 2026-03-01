@@ -129,9 +129,7 @@ button {
   }
 }
 
-/* =========================
-   DESKTOP (широкие экраны)
-   ========================= */
+
 .background {
   position: fixed;
   left: 50%;
@@ -156,10 +154,6 @@ button {
   pointer-events: none;
   z-index: -1;
 }
-
-/* =========================
-     <= 1440
-     ========================= */
 @media (max-width: 1440px) {
   .background {
     width: min(86vw, 1120px);
@@ -244,95 +238,6 @@ button {
   }
 }
 
-/* =====================================================
-.background {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -116px;
-
-  width: 70vw;
-  max-width: 1220px;
-  height: auto;
-
-  object-fit: contain;
-}
-
-.background_mobile {
-  display: none;
-}
-
-@media (max-width: 1440px) {
-  .background {
-    width: 70vw;
-    bottom: -10vw;
-  }
-}
-
-@media (max-width: 1280px) {
-  .background {
-    display: none;
-  }
-
-  .background_mobile {
-    display: block;
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-
-    width: 35vw;
-    max-width: 390px;
-    height: auto;
-
-    bottom: -27vw;
-
-    object-fit: contain;
-  }
-}
-
-@media (max-width: 768px) {
-  .background_mobile {
-    display: block;
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-
-    max-width: 390px;
-    height: auto;
-
-    width: 50vw;
-    max-width: 380px;
-    height: auto;
-    bottom: -38vw;
-
-    object-fit: contain;
-  }
-}
-@media (max-width: 550) {
-  .background_mobile {
-    display: block;
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-
-    max-width: 390px;
-
-    width: 80vw;
-    max-width: 380px;
-    height: auto;
-    bottom: -58vw;
-
-    object-fit: contain;
-  }
-}
-
-@media (max-width: 380px) {
-  .background_mobile {
-    width: 79vw;
-    bottom: -70vw;
-  }
-} */
-
 .noise {
   position: fixed;
   inset: 0;
@@ -393,7 +298,6 @@ button {
   gap: 24px;
   flex: 1;
   max-width: 900px;
-  /* min-width: 0; */
   color: #fff;
   font-size: 18px;
   letter-spacing: 2px;
