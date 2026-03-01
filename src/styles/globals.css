@@ -142,11 +142,11 @@ button {
   .background_mobile {
     display: block;
     position: fixed;
-    bottom: -50px; 
+    bottom: -150px; 
     left: 50%;
     transform: translateX(-50%);
     
-    width: 60vw;        
+    width: 75vw;        
     max-width: 800px;   
     height: auto;
     object-fit: contain;
