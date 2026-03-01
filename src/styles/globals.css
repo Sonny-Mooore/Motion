@@ -145,6 +145,7 @@ button {
     bottom: -120px;
     left: 50%;
     transform: translateX(-50%);
+    max-width: min(100vw, 800px);
   }
   .background {
     display: none;
@@ -626,14 +627,14 @@ button {
   .blur-1 {
     width: 200px;
     height: 200px;
-    right: -200px;
+    right: -100px;
     filter: blur(150px);
   }
 
   .blur-2 {
     width: 400px;
     height: 400px;
-    left: -350px;
+    left: -250px;
     top: 50%;
     filter: blur(200px);
   }
