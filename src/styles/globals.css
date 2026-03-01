@@ -212,6 +212,26 @@ button {
     transform: translateX(-50%) translateY(clamp(95px, 20vh, 240px));
   }
 }
+/* Высокие экраны (планшеты по высоте, типа 1024–1366px) */
+@media (min-height: 1000px) and (max-width: 1280px) {
+  .background_mobile {
+    /* больше и выше */
+    max-height: min(66vh, 760px);
+    width: min(88vw, 460px);
+
+    transform: translateX(-50%) translateY(clamp(40px, 8vh, 110px));
+  }
+}
+
+/* Высокие экраны на десктопе (если вдруг background показывается) */
+@media (min-height: 1000px) and (min-width: 1281px) {
+  .background {
+    max-height: min(66vh, 820px);
+    width: min(84vw, 1320px);
+
+    transform: translateX(-50%) translateY(clamp(35px, 7vh, 100px));
+  }
+}
 
 @media (max-height: 720px) {
   .background {
