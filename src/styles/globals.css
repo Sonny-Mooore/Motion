@@ -627,14 +627,14 @@ button {
   .blur-1 {
     width: 200px;
     height: 200px;
-    right: -100px;
+    right: -20px;
     filter: blur(150px);
   }
 
   .blur-2 {
     width: 400px;
     height: 400px;
-    left: -250px;
+    left: -100px;
     top: 50%;
     filter: blur(200px);
   }
