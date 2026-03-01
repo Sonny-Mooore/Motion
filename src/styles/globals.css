@@ -44,6 +44,8 @@
 img {
   margin: 0;
   padding: 0;
+  pointer-events: none; 
+  user-select: none; 
 }
 
 html,
@@ -54,10 +56,6 @@ body {
   background: rgba(15, 15, 15, 1);
   /* min-height: 100%; */
   overflow: hidden;
-}
-img {
-  pointer-events: none; 
-  user-select: none; 
 }
 
 @media screen and (max-width: 880px) {
