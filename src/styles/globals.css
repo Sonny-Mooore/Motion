@@ -53,8 +53,9 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   padding: 0;
+  height: 100%;
   background: rgba(15, 15, 15, 1);
-  overflow: hidden; /* полностью убираем скролл */
+  overflow: hidden;
   overscroll-behavior: none;
 }
 
@@ -84,7 +85,7 @@ button {
 .page {
   position: relative;
   isolation: isolate;
-  min-height: 100vh;
+  height: 100vh;   
 }
 
 .bg {
@@ -167,9 +168,7 @@ button {
     }
   }
   
-  /* =========================
-     <= 1280: переключаемся на mobile asset
-     ========================= */
+
   @media (max-width: 1280px) {
     .background {
       display: none;
@@ -181,7 +180,6 @@ button {
       left: 50%;
       bottom: 0;
   
-      /* тоже утапливаем */
       transform: translateX(-50%) translateY(clamp(70px, 14vh, 180px));
   
       width: min(86vw, 420px);
@@ -191,10 +189,7 @@ button {
       object-fit: contain;
     }
   }
-  
-  /* =========================
-     <= 768
-     ========================= */
+ 
   @media (max-width: 768px) {
     .background_mobile {
       width: min(88vw, 380px);
@@ -202,10 +197,7 @@ button {
       transform: translateX(-50%) translateY(clamp(80px, 16vh, 200px));
     }
   }
-  
-  /* =========================
-     <= 550 (ВАЖНО: px)
-     ========================= */
+
   @media (max-width: 550px) {
     .background_mobile {
       width: 90vw;
@@ -214,9 +206,7 @@ button {
     }
   }
   
-  /* =========================
-     <= 380
-     ========================= */
+
   @media (max-width: 380px) {
     .background_mobile {
       width: 92vw;
@@ -225,9 +215,7 @@ button {
     }
   }
   
-  /* =========================
-     Маленькая высота экрана (но ширина может быть большая)
-     ========================= */
+  
   @media (max-height: 720px) {
     .background {
       max-height: min(50vh, 540px);
