@@ -124,6 +124,8 @@ button {
     padding: 0 12px;
   }
 }
+
+
 /* =====================================================
    DESKTOP
 ===================================================== */
@@ -132,10 +134,12 @@ button {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -120px;
+  bottom: -8vw;
 
-  width: 1020px;
+  width: 65vw;
+  max-width: 1020px;
   height: auto;
+
   object-fit: contain;
 }
 
@@ -146,32 +150,20 @@ button {
 
 @media (max-width: 1440px) {
   .background {
-    width: 920px;
-    bottom: -130px;
+    width: 70vw;
+    bottom: -10vw;
   }
 }
 
 
 /* =====================================================
-   TABLET LANDSCAPE (например 1180x820)
+   TABLET (portrait + landscape)
 ===================================================== */
 
-@media (max-width: 1180px) and (orientation: landscape) {
+@media (max-width: 1024px) {
   .background {
-    width: 820px;
-    bottom: -150px;
-  }
-}
-
-
-/* =====================================================
-   TABLET PORTRAIT (например 820x1180 как iPad Air)
-===================================================== */
-
-@media (max-width: 900px) and (orientation: portrait) {
-  .background {
-    width: 700px;
-    bottom: -190px;
+    width: 75vw;
+    bottom: -12vw;
   }
 }
 
@@ -195,23 +187,26 @@ button {
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
-    
-    bottom: -90px;   /* 👈 было слишком низко */
-    
-    width: 360px;    /* 👈 уменьшаем ширину */
-    height: 520px;   /* 👈 уменьшаем высоту */
-    
+
+    width: 92vw;
+    max-width: 430px;
+    height: auto;
+
+    bottom: -18vw;
+
     object-fit: contain;
   }
 }
 
 
-/* маленькие телефоны */
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
 @media (max-width: 380px) {
   .background_mobile {
-    width: 330px;
-    height: 480px;
-    bottom: -95px;
+    width: 95vw;
+    bottom: -22vw;
   }
 }
 
