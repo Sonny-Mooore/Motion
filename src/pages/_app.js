@@ -12,6 +12,7 @@ export default function App({ Component, pageProps }) {
     const handleRouteChange = (url) => {
       if (typeof window !== "undefined" && typeof window.ym === "function") {
         window.ym(YM_ID, "hit", url);
+        console.log(typeof window.ym)
       }
     };
 

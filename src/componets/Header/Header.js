@@ -5,12 +5,9 @@ import BurgerMenu from './BurgerMenu/BurgerMenu';
 const Header = (props) => {
   const { handleClosePopup } = props;
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
-
   const router = useRouter();
-
   const go = (path) => router.push(path);
   const isActive = (path) => router.pathname === path;
-
   const openBurger = () => setIsBurgerOpen(true);
   const closeBurger = () => setIsBurgerOpen(false);
 
