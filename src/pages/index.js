@@ -197,9 +197,9 @@ export default function Home() {
                 margin: 71,
                 desc: 'Идеальный тарифный план для повседневных потребностей.',
                 features: [
-                  { icon: '↓', text: 'Безлимит' },
-                  { icon: '▭', text: '4 устройства' },
-                  { icon: '✔', text: 'Все сервера', },
+                  { icon: '/images/tariffs/download.svg', text: 'Безлимит' },
+                  { icon: '/images/tariffs/phone.svg', text: '4 устройства' },
+                  { icon: '/images/tariffs/done-all.svg', text: 'Все сервера' },
                 ],
                 price: 'от 239 Р / мес',
               }, {
@@ -207,31 +207,33 @@ export default function Home() {
                 margin: 27,
                 name: 'Семейный тариф',
                 desc: 'Тариф для использования легких нейросетей и серфинга интернета с лимитом на ГБ в месяц.',
-                features: [{ icon: '↓', text: '1 TB' },
-                  { icon: '▭', text: '10 устройств' }, {
-                    icon: '✔',
-                    text: 'Все сервера',
-                  }],
+                features: [
+                  { icon: '/images/tariffs/download.svg', text: 'Безлимит' },
+                  { icon: '/images/tariffs/phone.svg', text: '4 устройства' },
+                  { icon: '/images/tariffs/done-all.svg', text: 'Все сервера' },
+                ],
                 price: 'от 389 Р / мес',
               }, {
                 icon: 'Icons-4.svg',
                 margin: 71,
                 name: 'Студенческий тариф',
                 desc: 'У вас большая семья? Раздайте сервис всем, они будут рады',
-                features: [{ icon: '↓', text: '25 GB' }, { icon: '▭', text: '2 устройства' }, {
-                  icon: '✔',
-                  text: 'Все сервера',
-                }],
+                features: [
+                  { icon: '/images/tariffs/download.svg', text: 'Безлимит' },
+                  { icon: '/images/tariffs/phone.svg', text: '4 устройства' },
+                  { icon: '/images/tariffs/done-all.svg', text: 'Все сервера' },
+                ],
                 price: 'от 99 Р / мес',
               }, {
                 icon: 'Icons-5.svg',
                 name: 'Ежедневный тариф',
                 margin: 71,
                 desc: 'Идеальный тарифный план для повседневных потребностей.',
-                features: [{ icon: '↓', text: 'Безлимит' }, { icon: '▭', text: '1 устройство' }, {
-                  icon: '✔',
-                  text: 'Все сервера',
-                }],
+                features: [
+                  { icon: '/images/tariffs/download.svg', text: 'Безлимит' },
+                  { icon: '/images/tariffs/phone.svg', text: '4 устройства' },
+                  { icon: '/images/tariffs/done-all.svg', text: 'Все сервера' },
+                ],
                 price: 'от 25 Р / день',
               }].map((t) => (<div key={t.name} className="tariff_paid_card">
                 <div className="tariff_paid_header">
@@ -250,12 +252,13 @@ export default function Home() {
                     style={{ margin: `${t.margin}px 0 32px 0` }}
                     className="tariff_paid_features"
                   >
-                    {t.features.map((f) => (<li key={f.text} className="tariff_paid_feature">
-                            <span className="tariff_feature_icon">
-                              {f.icon}
-                            </span>
-                      <span>{f.text}</span>
-                    </li>))}
+                    {t.features.map((f) => (
+                      <div key={f.text} className="tariff_paid_feature">
+                        <img alt={''} src={f.icon} />
+                        <span>{f.text}</span>
+                      </div>
+                    ))
+                    }
                   </ul>
                   <button type="button" className="tariff_paid_btn">
                     {t.price}

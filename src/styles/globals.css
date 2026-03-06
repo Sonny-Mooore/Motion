@@ -1085,11 +1085,6 @@ button {
   color: rgba(255, 255, 255, 0.9);
 }
 
-.tariff_feature_icon {
-  flex-shrink: 0;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 14px;
-}
 
 .tariff_paid_btn {
   display: inline-flex;
