@@ -17,39 +17,28 @@ const Header = (props) => {
         <div className={'logo_bg'} onClick={() => go('/')}>
           <img src="/images/logo.svg" width={112} height={22} alt="loog" />
         </div>
-
         <div className={'nav_bg'}>
           <p
-            onClick={() => go('/')}
-            className={`nav_item ${isActive('/') ? 'nav_item_is_Active' : ''}`}
+            className={`nav_item nav_item_is_Active `}
           >
             Главная
           </p>
-
           <p
-            onClick={() => {
-              handleClosePopup?.();
-            }}
             className={`nav_item`}
           >
-            Инструкции
+            Тарифы
           </p>
-
           <p
-            onClick={() => router.push('/terms')}
-            className={`nav_item ${isActive('/terms') ? 'nav_item_is_Active' : ''}`}
+            className={`nav_item`}
           >
-            Правила использования
+            Приемущества
           </p>
-
           <p
-            onClick={() => go('/privacy')}
-            className={`nav_item ${isActive('/privacy') ? 'nav_item_is_Active' : ''}`}
+            className={`nav_item`}
           >
-            Политика конфиденциальности
+            FAQ
           </p>
         </div>
-
         <div className="icon_button_container">
           <button
             type="button"
@@ -57,7 +46,7 @@ const Header = (props) => {
             onClick={() => router.push('https://t.me/MotionSize')}
             aria-label="MotionSize"
           >
-            <img src={'/images/robot.svg'}  alt="" />
+            <img src={'/images/robot.svg'} alt="" />
           </button>
 
           <button
