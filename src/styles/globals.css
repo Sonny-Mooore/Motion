@@ -1040,7 +1040,6 @@ button {
   align-items: center;
   gap: 12px;
   margin-bottom: 10px;
-  border: red solid 1px;
 }
 
 .tariff_paid_title {

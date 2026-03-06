@@ -31,7 +31,7 @@ function FaqItem({ question, answer, defaultOpen }) {
 
       </div>
       {open && <div className="faq_answer">
-        <div className={"faq_title"}>1. Откройте Telegram</div>
+        <div className={'faq_title'}>1. Откройте Telegram</div>
 
       </div>
       }
@@ -196,20 +196,22 @@ export default function Home() {
                 name: 'Премиум тариф',
                 margin: 71,
                 desc: 'Идеальный тарифный план для повседневных потребностей.',
-                features: [{ icon: '↓', text: 'Безлимит' }, { icon: '▭', text: '4 устройства' }, {
-                  icon: '✔',
-                  text: 'Все сервера',
-                }],
+                features: [
+                  { icon: '↓', text: 'Безлимит' },
+                  { icon: '▭', text: '4 устройства' },
+                  { icon: '✔', text: 'Все сервера', },
+                ],
                 price: 'от 239 Р / мес',
               }, {
                 icon: 'icons-3.svg',
                 margin: 27,
                 name: 'Семейный тариф',
                 desc: 'Тариф для использования легких нейросетей и серфинга интернета с лимитом на ГБ в месяц.',
-                features: [{ icon: '↓', text: '1 TB' }, { icon: '▭', text: '10 устройств' }, {
-                  icon: '✔',
-                  text: 'Все сервера',
-                }],
+                features: [{ icon: '↓', text: '1 TB' },
+                  { icon: '▭', text: '10 устройств' }, {
+                    icon: '✔',
+                    text: 'Все сервера',
+                  }],
                 price: 'от 389 Р / мес',
               }, {
                 icon: 'icons-4.svg',
