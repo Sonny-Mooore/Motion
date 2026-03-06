@@ -1005,6 +1005,9 @@ button {
   padding: 14px 28px;
   cursor: pointer;
   transition: background 0.2s, border-color 0.2s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
 
@@ -1104,8 +1107,44 @@ button {
 
   /*margin: auto 0 0 0 ;*/
   transition: background 0.2s, border-color 0.2s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
+.tariff_free_btn::before,
+.tariff_paid_btn::before {
+  content: '';
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  display: flex;
+  width: 259px;
+  height: 57px;
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(
+          circle,
+          rgba(255, 70, 70, 0.55) 0%,
+          rgba(255, 0, 0, 0.28) 25%,
+          transparent 70%
+  );
+
+  filter: blur(35px);
+  pointer-events: none;
+  z-index: -1;
+  transition: opacity 0.2s ease;
+  opacity: 0;
+}
+
+.tariff_free_btn:hover::before,
+.tariff_paid_btn:hover::before {
+  opacity: 1;
+}
 /*.tariff_paid_btn:hover {*/
 /*  background: rgba(255, 255, 255, 0.1);*/
 /*  border-color: rgba(255, 255, 255, 0.2);*/

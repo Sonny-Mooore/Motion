@@ -184,7 +184,15 @@ export default function Home() {
                   7 дней бесплатного доступа для тестирования серверов и
                   личного кабинета
                 </p>
-                <button type="button" className="tariff_free_btn">
+                <button
+                  type="button"
+                  className="tariff_free_btn"
+                  onMouseMove={(e) => {
+                    const rect = e.currentTarget.getBoundingClientRect();
+                    e.currentTarget.style.setProperty('--x', `${e.clientX - rect.left}px`);
+                    e.currentTarget.style.setProperty('--y', `${e.clientY - rect.top}px`);
+                  }}
+                >
                   Получить бесплатно →
                 </button>
               </div>
@@ -260,7 +268,15 @@ export default function Home() {
                     ))
                     }
                   </ul>
-                  <button type="button" className="tariff_paid_btn">
+                  <button
+                    type="button"
+                    className="tariff_paid_btn"
+                    onMouseMove={(e) => {
+                      const rect = e.currentTarget.getBoundingClientRect();
+                      e.currentTarget.style.setProperty('--x', `${e.clientX - rect.left}px`);
+                      e.currentTarget.style.setProperty('--y', `${e.clientY - rect.top}px`);
+                    }}
+                  >
                     {t.price}
                     <img
                       width={14}
