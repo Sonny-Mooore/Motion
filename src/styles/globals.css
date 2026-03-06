@@ -1351,6 +1351,7 @@ button {
   border-radius: 32px;
   border: 1px solid rgba(255, 255, 255, .1);
   background: rgba(255, 255, 255, 0.02);
+  justify-content: space-around;
 }
 
 .advantages_card_conatainer:nth-child(1) {
@@ -1375,9 +1376,14 @@ button {
 
 .advantages_paid_header {
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   gap: 16px;
+}
+
+.advantages_paid_image {
+  margin: 0 auto;
+
 }
 
 .advantages_paid_title {

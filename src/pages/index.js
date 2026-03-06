@@ -116,7 +116,7 @@ export default function Home() {
               </div>
               <div className="hero_right">
                 <img
-                  src="/images/phones.svg"
+                  src="/images/phones.png"
                   className="hero_phones"
                   alt=""
                 />
@@ -347,6 +347,7 @@ export default function Home() {
                 },
                 {
                   icon: 'grom.svg',
+                  image: '/images/zoom.svg',
                   title: 'Удобный личный кабинет',
                   text: 'У нас современный и простой личный кабинет с обширным функционалом для любого вашего устройства.',
                 },
@@ -367,7 +368,11 @@ export default function Home() {
                     <h3 className="advantages_paid_title">{a.title}</h3>
                   </div>
                   <div className={'line'} />
+
                   <p className="advantages_paid_desc">{a.text}</p>
+                  {a.image && <img className={'advantages_paid_image'} width={318} height={245} src={a.image} alt="" />}
+
+
                 </div>
               ))}
             </div>
