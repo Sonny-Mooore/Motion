@@ -129,7 +129,7 @@ export default function Home() {
               <img
                 width={52}
                 height={52}
-                src="/images/feature_cards/icons-4.svg"
+                src="/images/feature_cards/Icons-4.svg"
                 alt=""
               />
               <h3 className="card_feature_title">Высокая скорость</h3>
@@ -138,7 +138,7 @@ export default function Home() {
               <img
                 width={52}
                 height={52}
-                src="/images/feature_cards/icons-1.svg"
+                src="/images/feature_cards/Icons-1.svg"
                 alt=""
               />
               <h3 className="card_feature_title">Нет рекламы на YouTube</h3>
@@ -147,7 +147,7 @@ export default function Home() {
               <img
                 width={52}
                 height={52}
-                src="/images/feature_cards/icons-2.svg"
+                src="/images/feature_cards/Icons-2.svg"
                 alt=""
               />
               <h3 className="card_feature_title">Удобный интерфейс</h3>
@@ -156,7 +156,7 @@ export default function Home() {
               <img
                 width={52}
                 height={52}
-                src="/images/feature_cards/icons-3.svg"
+                src="/images/feature_cards/Icons-3.svg"
                 alt=""
               />
               <h3 className="card_feature_title">
@@ -192,7 +192,7 @@ export default function Home() {
 
             <div className="tariffs_paid_wrap">
               {[{
-                icon: 'icons-2.svg',
+                icon: 'Icons-2.svg',
                 name: 'Премиум тариф',
                 margin: 71,
                 desc: 'Идеальный тарифный план для повседневных потребностей.',
@@ -203,7 +203,7 @@ export default function Home() {
                 ],
                 price: 'от 239 Р / мес',
               }, {
-                icon: 'icons-3.svg',
+                icon: 'Icons-3.svg',
                 margin: 27,
                 name: 'Семейный тариф',
                 desc: 'Тариф для использования легких нейросетей и серфинга интернета с лимитом на ГБ в месяц.',
@@ -214,7 +214,7 @@ export default function Home() {
                   }],
                 price: 'от 389 Р / мес',
               }, {
-                icon: 'icons-4.svg',
+                icon: 'Icons-4.svg',
                 margin: 71,
                 name: 'Студенческий тариф',
                 desc: 'У вас большая семья? Раздайте сервис всем, они будут рады',
@@ -224,7 +224,7 @@ export default function Home() {
                 }],
                 price: 'от 99 Р / мес',
               }, {
-                icon: 'icons-5.svg',
+                icon: 'Icons-5.svg',
                 name: 'Ежедневный тариф',
                 margin: 71,
                 desc: 'Идеальный тарифный план для повседневных потребностей.',
