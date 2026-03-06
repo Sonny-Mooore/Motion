@@ -202,7 +202,7 @@ export default function Home() {
               {[{
                 icon: 'Icons-2.svg',
                 name: 'Премиум тариф',
-                margin: 71,
+                margin: 94,
                 desc: 'Идеальный тарифный план для повседневных потребностей.',
                 features: [
                   { icon: '/images/tariffs/download.svg', text: 'Безлимит' },
@@ -212,7 +212,7 @@ export default function Home() {
                 price: 'от 239 Р / мес',
               }, {
                 icon: 'Icons-3.svg',
-                margin: 27,
+                margin: 52,
                 name: 'Семейный тариф',
                 desc: 'Тариф для использования легких нейросетей и серфинга интернета с лимитом на ГБ в месяц.',
                 features: [
@@ -223,7 +223,7 @@ export default function Home() {
                 price: 'от 389 Р / мес',
               }, {
                 icon: 'Icons-4.svg',
-                margin: 71,
+                margin: 94,
                 name: 'Студенческий тариф',
                 desc: 'У вас большая семья? Раздайте сервис всем, они будут рады',
                 features: [
@@ -235,7 +235,7 @@ export default function Home() {
               }, {
                 icon: 'Icons-5.svg',
                 name: 'Ежедневный тариф',
-                margin: 71,
+                margin: 94,
                 desc: 'Идеальный тарифный план для повседневных потребностей.',
                 features: [
                   { icon: '/images/tariffs/download.svg', text: 'Безлимит' },
@@ -262,7 +262,7 @@ export default function Home() {
                   >
                     {t.features.map((f) => (
                       <div key={f.text} className="tariff_paid_feature">
-                        <img alt={''} src={f.icon} />
+                        <img width={22} height={22} alt={''} src={f.icon} />
                         <span>{f.text}</span>
                       </div>
                     ))

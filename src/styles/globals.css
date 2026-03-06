@@ -1024,19 +1024,15 @@ button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  /*flex: 1 1 0;*/
   padding: 24px;
   width: 239px;
+  height: 426px;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.03);
   transition: border-color 0.2s, background 0.2s;
 }
 
-/*.tariff_paid_card:hover {*/
-/*  background: rgba(255, 255, 255, 0.05);*/
-/*  border-color: rgba(255, 255, 255, 0.12);*/
-/*}*/
 
 .tariff_paid_header {
   display: flex;
@@ -1056,9 +1052,9 @@ button {
 
 .tariff_paid_desc {
   font-family: 'Montserrat', sans-serif;
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.75);
-  line-height: 1.4;
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .tariff_paid_desc_container {
@@ -1095,7 +1091,7 @@ button {
   justify-content: center;
   gap: 15px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -1145,6 +1141,7 @@ button {
 .tariff_paid_btn:hover::before {
   opacity: 1;
 }
+
 /*.tariff_paid_btn:hover {*/
 /*  background: rgba(255, 255, 255, 0.1);*/
 /*  border-color: rgba(255, 255, 255, 0.2);*/
@@ -1449,6 +1446,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  margin: 54px 0 0 0;
 }
 
 .faq_item {
