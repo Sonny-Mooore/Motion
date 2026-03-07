@@ -57,10 +57,10 @@ const Footer = () => {
         <div className={'footer_title'}>
           О проекте
         </div>
-        <div onClick={() => router.push('/terms')} className={'footer_nav'}>
+        <div onClick={() => router.push('/privacy')} className={'footer_nav'}>
           Политика конфиденциальности
         </div>
-        <div className={'footer_nav'}>
+        <div onClick={() => router.push('/terms')} className={'footer_nav'}>
           Условия использования
         </div>
       </div>
