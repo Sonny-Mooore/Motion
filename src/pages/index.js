@@ -7,82 +7,82 @@ import Footer from '@/componets/Footer/Footer';
 
 const FIRST_VISIT_KEY = 'motion_first_visit_done';
 
-function FaqItem({ question, answer, defaultOpen }) {
-  const [open, setOpen] = useState(!!defaultOpen);
-  return (
-    <>
-      <div className={`faq_item ${open ? 'faq_item_open' : ''}`}>
-
-        <button
-          type="button"
-          className="faq_question"
-          onClick={() => setOpen(!open)}
-        >
-          <div className={'faq_question_text'}>Как использовать наш сервис?</div>
-          <img
-            src="/images/faq/button-faq.svg"
-            alt=""
-            width={48}
-            height={48}
-            style={{
-              transform: open ? 'rotate(180deg)' : 'rotate(0deg)',
-              transition: 'transform 0.3s ease',
-            }}
-          />
-        </button>
-        <div className={`${open ? 'line' : ''}`} />
-
-        {open &&
-          <div className="faq_answer">
-            <div className={'faq_title'}>1. Откройте Telegram</div>
-
-            <div className={'faq_answer_row_container'}>
-              <img src="/images/strelka.svg" alt="" />
-              <div className={'first_stage'}>
-                У вас не работает Telegram? Добавьте наш бесплатный прокси (можно добавить только при наличии Telegram
-                на девайсе).
-              </div>
-            </div>
-            <button
-              onMouseMove={(e) => {
-                const rect = e.currentTarget.getBoundingClientRect();
-                e.currentTarget.style.setProperty('--x', `${e.clientX - rect.left}px`);
-                e.currentTarget.style.setProperty('--y', `${e.clientY - rect.top}px`);
-              }}
-              className={'faq_button'}>
-              <img width={18} height={18} src="/images/faq/tg.svg" alt="" />
-              Добавить прокси
-            </button>
-            <div className={'faq_title margin_32'}>2. Откройте Telegram и перейдите в бота</div>
-            <button
-              onMouseMove={(e) => {
-                const rect = e.currentTarget.getBoundingClientRect();
-                e.currentTarget.style.setProperty('--x', `${e.clientX - rect.left}px`);
-                e.currentTarget.style.setProperty('--y', `${e.clientY - rect.top}px`);
-              }}
-              className={'faq_button width_179'}>
-              <img width={18} height={18} src="/images/faq/logo.svg" alt="" />
-              Motion
-              <img className={'strelka '} width={18} height={18} src="/images/strelka.svg" alt="" />
-
-            </button>
-            <div className={'faq_title margin_32'}>3. Откройте Telegram и перейдите в бота</div>
-            <img width={725} height={253} src="/images/faq/1-faq-stage.png" alt="" />
-            <div className={'faq_title margin_32'}>4. Нажмите подключить устройство</div>
-            <img width={725} height={253} src="/images/faq/2-faq-stage.png" alt="" />
-            <div className={'faq_title margin_32'}>5. Выберите приложение и нажмите кнопку установки</div>
-            <img width={725} height={410} src="/images/faq/3-faq-stage.png" alt="" />
-            <div className={'faq_title margin_32'}>6. После установки приложения нажмите “Добавить подписку”</div>
-            <img width={725} height={410} src="/images/faq/4-faq-stage.png" alt="" />
-            <div className={'faq_title margin_32'}>7. Готово! Можете включить и использовать сервис.</div>
-
-          </div>
-        }
-      </div>
-    </>
-
-  );
-}
+// function FaqItem({ defaultOpen }) {
+//   const [faqOpen, setFaqOpen] = useState(!!defaultOpen);
+//   return (
+//     <>
+//       <div className={`faq_item ${faqOpen ? 'faq_item_open' : ''}`}>
+//
+//         <button
+//           type="button"
+//           className="faq_question"
+//           onClick={() => setFaqOpen(!faqOpen)}
+//         >
+//           <div className={'faq_question_text'}>Как использовать наш сервис?</div>
+//           <img
+//             src="/images/faq/button-faq.svg"
+//             alt=""
+//             width={48}
+//             height={48}
+//             style={{
+//               transform: faqOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+//               transition: 'transform 0.3s ease',
+//             }}
+//           />
+//         </button>
+//         <div className={`${faqOpen ? 'line' : ''}`} />
+//
+//         {faqOpen &&
+//           <div className="faq_answer">
+//             <div className={'faq_title'}>1. Откройте Telegram</div>
+//
+//             <div className={'faq_answer_row_container'}>
+//               <img src="/images/strelka.svg" alt="" />
+//               <div className={'first_stage'}>
+//                 У вас не работает Telegram? Добавьте наш бесплатный прокси (можно добавить только при наличии Telegram
+//                 на девайсе).
+//               </div>
+//             </div>
+//             <button
+//               onMouseMove={(e) => {
+//                 const rect = e.currentTarget.getBoundingClientRect();
+//                 e.currentTarget.style.setProperty('--x', `${e.clientX - rect.left}px`);
+//                 e.currentTarget.style.setProperty('--y', `${e.clientY - rect.top}px`);
+//               }}
+//               className={'faq_button'}>
+//               <img width={18} height={18} src="/images/faq/tg.svg" alt="" />
+//               Добавить прокси
+//             </button>
+//             <div className={'faq_title margin_32'}>2. Откройте Telegram и перейдите в бота</div>
+//             <button
+//               onMouseMove={(e) => {
+//                 const rect = e.currentTarget.getBoundingClientRect();
+//                 e.currentTarget.style.setProperty('--x', `${e.clientX - rect.left}px`);
+//                 e.currentTarget.style.setProperty('--y', `${e.clientY - rect.top}px`);
+//               }}
+//               className={'faq_button width_179'}>
+//               <img width={18} height={18} src="/images/faq/logo.svg" alt="" />
+//               Motion
+//               <img className={'strelka '} width={18} height={18} src="/images/strelka.svg" alt="" />
+//
+//             </button>
+//             <div className={'faq_title margin_32'}>3. Откройте Telegram и перейдите в бота</div>
+//             <img width={725} height={253} src="/images/faq/1-faq-stage.png" alt="" />
+//             <div className={'faq_title margin_32'}>4. Нажмите подключить устройство</div>
+//             <img width={725} height={253} src="/images/faq/2-faq-stage.png" alt="" />
+//             <div className={'faq_title margin_32'}>5. Выберите приложение и нажмите кнопку установки</div>
+//             <img width={725} height={410} src="/images/faq/3-faq-stage.png" alt="" />
+//             <div className={'faq_title margin_32'}>6. После установки приложения нажмите “Добавить подписку”</div>
+//             <img width={725} height={410} src="/images/faq/4-faq-stage.png" alt="" />
+//             <div className={'faq_title margin_32'}>7. Готово! Можете включить и использовать сервис.</div>
+//
+//           </div>
+//         }
+//       </div>
+//     </>
+//
+//   );
+// }
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -98,6 +98,9 @@ export default function Home() {
     }
     window.location.href = 'https://t.me/motionvpnbot';
   };
+
+  const [faqOpen, setFaqOpen] = useState(false);
+  const [faqSecondOpen, setFaqSecondOpen] = useState(false);
 
   const handleClosePopup = () => setOpen(!open);
 
@@ -252,44 +255,52 @@ export default function Home() {
                 name: 'Премиум тариф',
                 margin: 94,
                 desc: 'Идеальный тарифный план для повседневных потребностей.',
-                features: [
-                  { icon: '/images/tariffs/download.svg', text: 'Безлимит' },
-                  { icon: '/images/tariffs/phone.svg', text: '4 устройства' },
-                  { icon: '/images/tariffs/done-all.svg', text: 'Все сервера' },
-                ],
+                features: [{
+                  icon: '/images/tariffs/download.svg',
+                  text: 'Безлимит',
+                }, { icon: '/images/tariffs/phone.svg', text: '4 устройства' }, {
+                  icon: '/images/tariffs/done-all.svg',
+                  text: 'Все сервера',
+                }],
                 price: 'от 239 Р / мес',
               }, {
                 icon: 'Icons-3.svg',
                 margin: 52,
                 name: 'Семейный тариф',
                 desc: 'Тариф для использования легких нейросетей и серфинга интернета с лимитом на ГБ в месяц.',
-                features: [
-                  { icon: '/images/tariffs/download.svg', text: 'Безлимит' },
-                  { icon: '/images/tariffs/phone.svg', text: '4 устройства' },
-                  { icon: '/images/tariffs/done-all.svg', text: 'Все сервера' },
-                ],
+                features: [{
+                  icon: '/images/tariffs/download.svg',
+                  text: 'Безлимит',
+                }, { icon: '/images/tariffs/phone.svg', text: '4 устройства' }, {
+                  icon: '/images/tariffs/done-all.svg',
+                  text: 'Все сервера',
+                }],
                 price: 'от 389 Р / мес',
               }, {
                 icon: 'Icons-4.svg',
                 margin: 94,
                 name: 'Студенческий тариф',
                 desc: 'У вас большая семья? Раздайте сервис всем, они будут рады',
-                features: [
-                  { icon: '/images/tariffs/download.svg', text: 'Безлимит' },
-                  { icon: '/images/tariffs/phone.svg', text: '4 устройства' },
-                  { icon: '/images/tariffs/done-all.svg', text: 'Все сервера' },
-                ],
+                features: [{
+                  icon: '/images/tariffs/download.svg',
+                  text: 'Безлимит',
+                }, { icon: '/images/tariffs/phone.svg', text: '4 устройства' }, {
+                  icon: '/images/tariffs/done-all.svg',
+                  text: 'Все сервера',
+                }],
                 price: 'от 99 Р / мес',
               }, {
                 icon: 'Icons-5.svg',
                 name: 'Ежедневный тариф',
                 margin: 94,
                 desc: 'Идеальный тарифный план для повседневных потребностей.',
-                features: [
-                  { icon: '/images/tariffs/download.svg', text: 'Безлимит' },
-                  { icon: '/images/tariffs/phone.svg', text: '4 устройства' },
-                  { icon: '/images/tariffs/done-all.svg', text: 'Все сервера' },
-                ],
+                features: [{
+                  icon: '/images/tariffs/download.svg',
+                  text: 'Безлимит',
+                }, { icon: '/images/tariffs/phone.svg', text: '4 устройства' }, {
+                  icon: '/images/tariffs/done-all.svg',
+                  text: 'Все сервера',
+                }],
                 price: 'от 25 Р / день',
               }].map((t) => (<div key={t.name} className="tariff_paid_card">
                 <div className="tariff_paid_header">
@@ -308,13 +319,10 @@ export default function Home() {
                     style={{ margin: `${t.margin}px 0 32px 0` }}
                     className="tariff_paid_features"
                   >
-                    {t.features.map((f) => (
-                      <div key={f.text} className="tariff_paid_feature">
-                        <img width={22} height={22} alt={''} src={f.icon} />
-                        <span>{f.text}</span>
-                      </div>
-                    ))
-                    }
+                    {t.features.map((f) => (<div key={f.text} className="tariff_paid_feature">
+                      <img width={22} height={22} alt={''} src={f.icon} />
+                      <span>{f.text}</span>
+                    </div>))}
                   </ul>
                   <button
                     type="button"
@@ -357,16 +365,13 @@ export default function Home() {
                 label: 'macOC', icon: '/images/devices/apple.svg',
               }, {
                 label: 'Linux', icon: '/images/devices/linux.svg',
-              },
-                {
-                  label: 'Android TV', maxWidth: true, icon: '/images/devices/desktop.svg',
-                },
-                {
-                  label: 'Apple TV', maxWidth: true, icon: '/images/devices/desktop.svg',
-                },
-                {
-                  label: 'Smart TV', maxWidth: true, icon: '/images/devices/desktop.svg',
-                }].map((s) => (
+              }, {
+                label: 'Android TV', maxWidth: true, icon: '/images/devices/desktop.svg',
+              }, {
+                label: 'Apple TV', maxWidth: true, icon: '/images/devices/desktop.svg',
+              }, {
+                label: 'Smart TV', maxWidth: true, icon: '/images/devices/desktop.svg',
+              }].map((s) => (
                 <div key={s.label} type="button" className={s.maxWidth ? 'store_btn store_btn_max_width' : `store_btn`}>
                   <img
                     width={52}
@@ -382,56 +387,174 @@ export default function Home() {
           <section id="advantages" className="section advantages_section">
             <h2 className="section_title">Преимущества</h2>
             <div className="advantages_grid">
-              {[
-                {
-                  icon: 'locker.svg',
-                  title: 'Конфиденциальность и защита данных',
-                  text: 'Для обеспечения безопасности и анонимности ваших интернет-соединений мы применяем современные технологии, такие как VLESS и XTLS-Reality.',
-                },
-                {
-                  icon: 'youtube.svg',
-                  title: 'У нас нет рекламы на YouTube',
-                  text: 'Мы модифицировали почти каждый сервер, который позволяет использовать YouTube без рекламы и обходить любые блокировки.',
-                },
-                {
-                  icon: 'grom.svg',
-                  image: '/images/zoom.svg',
-                  title: 'Удобный личный кабинет',
-                  text: 'У нас современный и простой личный кабинет с обширным функционалом для любого вашего устройства.',
-                },
-                {
-                  icon: '2-people.svg',
-                  title: 'Реферальная программа',
-                  text: 'Много друзей? Приглашайте их в наш бот и получайте вознаграждение. Чтобы присоединиться к программе, перейдите в  приложение, скопируйте ваше приглашение в профиле и отправьте его другу. ',
-                },
-              ].map((a) => (
-                <div className="advantages_card_conatainer">
-                  <div key={a.title} className="advantages_paid_header">
-                    <img
-                      width={52}
-                      height={52}
-                      src={`/images/advantages/${a.icon}`}
-                      alt=""
-                    />
-                    <h3 className="advantages_paid_title">{a.title}</h3>
-                  </div>
-                  <div className={'line'} />
-
-                  <p className="advantages_paid_desc">{a.text}</p>
-                  {a.image && <img className={'advantages_paid_image'} width={318} height={245} src={a.image} alt="" />}
-
-
+              {[{
+                icon: 'locker.svg',
+                title: 'Конфиденциальность и защита данных',
+                text: 'Для обеспечения безопасности и анонимности ваших интернет-соединений мы применяем современные технологии, такие как VLESS и XTLS-Reality.',
+              }, {
+                icon: 'youtube.svg',
+                title: 'У нас нет рекламы на YouTube',
+                text: 'Мы модифицировали почти каждый сервер, который позволяет использовать YouTube без рекламы и обходить любые блокировки.',
+              }, {
+                icon: 'grom.svg',
+                image: '/images/zoom.svg',
+                title: 'Удобный личный кабинет',
+                text: 'У нас современный и простой личный кабинет с обширным функционалом для любого вашего устройства.',
+              }, {
+                icon: '2-people.svg',
+                title: 'Реферальная программа',
+                text: 'Много друзей? Приглашайте их в наш бот и получайте вознаграждение. Чтобы присоединиться к программе, перейдите в  приложение, скопируйте ваше приглашение в профиле и отправьте его другу. ',
+              }].map((a) => (<div className="advantages_card_conatainer">
+                <div key={a.title} className="advantages_paid_header">
+                  <img
+                    width={52}
+                    height={52}
+                    src={`/images/advantages/${a.icon}`}
+                    alt=""
+                  />
+                  <h3 className="advantages_paid_title">{a.title}</h3>
                 </div>
-              ))}
+                <div className={'line'} />
+
+                <p className="advantages_paid_desc">{a.text}</p>
+                {a.image && <img className={'advantages_paid_image'} width={318} height={245} src={a.image} alt="" />}
+
+
+              </div>))}
             </div>
           </section>
 
           <section id="faq" className="section faq_section">
             <h2 className="section_title">FAQ</h2>
             <div className="faq_list">
+              <div className={`faq_item ${faqOpen ? 'faq_item_open' : ''}`}>
+                <button
+                  type="button"
+                  className="faq_question"
+                  onClick={() => setFaqOpen(!faqOpen)}
+                >
+                  <div className={'faq_question_text'}>Как использовать наш сервис?</div>
+                  <img
+                    src="/images/faq/button-faq.svg"
+                    alt=""
+                    width={48}
+                    height={48}
+                    style={{
+                      transform: faqOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s ease',
+                    }}
+                  />
+                </button>
+                <div className={`${faqOpen ? 'line' : ''}`} />
 
-              <FaqItem />
+                {faqOpen && <div className="faq_answer">
+                  <div className={'faq_title'}>1. Откройте Telegram</div>
+
+                  <div className={'faq_answer_row_container'}>
+                    <img src="/images/strelka.svg" alt="" />
+                    <div className={'first_stage'}>
+                      У вас не работает Telegram? Добавьте наш бесплатный прокси (можно добавить только при наличии
+                      Telegram
+                      на девайсе).
+                    </div>
+                  </div>
+                  <button
+                    onMouseMove={(e) => {
+                      const rect = e.currentTarget.getBoundingClientRect();
+                      e.currentTarget.style.setProperty('--x', `${e.clientX - rect.left}px`);
+                      e.currentTarget.style.setProperty('--y', `${e.clientY - rect.top}px`);
+                    }}
+                    className={'faq_button'}>
+                    <img width={18} height={18} src="/images/faq/tg.svg" alt="" />
+                    Добавить прокси
+                  </button>
+                  <div className={'faq_title margin_32'}>2. Откройте Telegram и перейдите в бота</div>
+                  <button
+                    onMouseMove={(e) => {
+                      const rect = e.currentTarget.getBoundingClientRect();
+                      e.currentTarget.style.setProperty('--x', `${e.clientX - rect.left}px`);
+                      e.currentTarget.style.setProperty('--y', `${e.clientY - rect.top}px`);
+                    }}
+                    className={'faq_button width_179'}>
+                    <img width={18} height={18} src="/images/faq/logo.svg" alt="" />
+                    Motion
+                    <img className={'strelka '} width={18} height={18} src="/images/strelka.svg" alt="" />
+
+                  </button>
+                  <div className={'faq_title margin_32'}>3. Откройте Telegram и перейдите в бота</div>
+                  <img width={725} height={253} src="/images/faq/1-faq-stage.png" alt="" />
+                  <div className={'faq_title margin_32'}>4. Нажмите подключить устройство</div>
+                  <img width={725} height={253} src="/images/faq/2-faq-stage.png" alt="" />
+                  <div className={'faq_title margin_32'}>5. Выберите приложение и нажмите кнопку установки</div>
+                  <img width={725} height={410} src="/images/faq/3-faq-stage.png" alt="" />
+                  <div className={'faq_title margin_32'}>6. После установки приложения нажмите “Добавить подписку”
+                  </div>
+                  <img width={725} height={410} src="/images/faq/4-faq-stage.png" alt="" />
+                  <div className={'faq_title margin_32'}>7. Готово! Можете включить и использовать сервис.</div>
+
+                </div>}
+              </div>
             </div>
+            <div className="faq_list">
+              <div className={`faq_item ${faqSecondOpen ? 'faq_item_open' : ''}`}>
+
+                <button
+                  type="button"
+                  className="faq_question"
+                  onClick={() => setFaqSecondOpen(!faqSecondOpen)}
+                >
+                  <div className={'faq_question_text'}>Мои данные защищены?</div>
+                  <img
+                    src="/images/faq/button-faq.svg"
+                    alt=""
+                    width={48}
+                    height={48}
+                    style={{
+                      transform: faqSecondOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s ease',
+                    }}
+                  />
+                </button>
+                <div className={`${faqSecondOpen ? 'line' : ''}`} />
+
+                {faqSecondOpen && <div className="faq_answer">
+
+                  <div className={'row'}>
+                    Для обеспечения безопасности и анонимности ваших интернет-соединений мы
+                    применяем современные технологии, такие как VLESS и XTLS-Reality.
+                  </div>
+                  <div className={'footer_title margin_32'}>Вот как это функционирует:</div>
+
+                  <div className={'row'}>
+                    VLESS — один из самых быстрых и надежных протоколов подключения. Он не позволяет вашему
+                    интернет-провайдеру определить, что вы используете VPN, в отличие от устаревших технологий,
+                    применяемых в бесплатных и ненадежных сервисах.
+                  </div>
+                  <div className={'row'}>
+                    XTLS-Reality — это дополнительный уровень защиты, который полностью скрывает ваш трафик. Все ваши
+                    действия в интернете становятся недоступными для оператора связи. Например, посещение YouTube и
+                    Instagram может выглядеть как посещение Rutube и РБК.
+                  </div>
+                  <div className={'row'}>
+                    Отсутствие сбора данных. Мы не собираем никакой информации о ваших действиях в интернете, запросах
+                    или использовании трафика.
+                  </div>
+                  <div className={'row'}>
+                    Применяемые нами методы шифрования делают невозможным отслеживание действий пользователя даже для
+                    нас. Ваш интернет-провайдер видит только зашифрованные и замаскированные данные.
+                  </div>
+
+                  <div className={'faq_title margin_32'}>
+                    Технически невозможно украсть данные. Даже если бы мы захотели продать или передать ваши данные, это
+                    было бы невозможно из-за сложной системы анонимизации и шифрования. Мы не занимаемся продажей
+                    рекламы. Мы финансируем нашу работу исключительно за счет продажи платных подписок, а не за счет
+                    продажи личных данных или бесконечных рекламных кампаний, как это делают многие бесплатные и дешевые
+                    VPN-сервисы.
+                  </div>
+
+
+                </div>}
+              </div>
+            </div>
+
           </section>
         </div>
         <Footer />
@@ -444,6 +567,5 @@ export default function Home() {
         handleContentPopupClose={handleContentPopupClose}
       />;
     </div>
-  </>)
-    ;
+  </>);
 }

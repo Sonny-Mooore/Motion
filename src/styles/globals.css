@@ -699,7 +699,7 @@ button {
   pointer-events: none;
 }
 
-.blur-3{
+.blur-3 {
   position: absolute;
   top: 2307px;
   right: -632px;
@@ -711,7 +711,8 @@ button {
   z-index: -1;
   pointer-events: none;
 }
-.blur-4{
+
+.blur-4 {
   position: absolute;
   top: 2907px;
   left: -632px;
@@ -723,7 +724,8 @@ button {
   z-index: -1;
   pointer-events: none;
 }
-.blur-5{
+
+.blur-5 {
   position: absolute;
   top: 3407px;
   right: -632px;
@@ -1600,6 +1602,15 @@ button {
   line-height: normal;
 }
 
+.first_stage_regular {
+  color: #FFF;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 .faq_button {
   display: flex;
   padding: 14px 24px;
@@ -1688,20 +1699,23 @@ button {
 
 .row {
   display: flex;
-
+  max-width: 725px;
   gap: 64px;
+  color: #FFF;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .footer_title {
-
   color: #FFF;
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  /*margin: 0 0 24px 0;*/
-
 }
 
 .footer_nav {
