@@ -1502,7 +1502,6 @@ button {
   max-height: 480px;
   padding-top: 8px;
 
-  scrollbar-width: thin;
 
   scrollbar-width: none;
   -ms-overflow-style: none;
