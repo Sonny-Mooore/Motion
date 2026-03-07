@@ -37,7 +37,7 @@ export const Content = (props) => {
             <img
               width={20}
               height={20}
-              src={'/images/device/mobile/lineicons_telegram.svg'}
+              src={'/images/device/mobile/tg.svg'}
               alt="telegram"
             />
           </button>

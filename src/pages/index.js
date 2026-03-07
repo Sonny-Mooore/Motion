@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Device from '@/componets/modal/device/Device';
 import { Content } from '@/componets/modal/content/Content';
+import Footer from '@/componets/Footer/Footer';
 
 const FIRST_VISIT_KEY = 'motion_first_visit_done';
 
@@ -11,12 +12,13 @@ function FaqItem({ question, answer, defaultOpen }) {
   return (
     <>
       <div className={`faq_item ${open ? 'faq_item_open' : ''}`}>
+
         <button
           type="button"
           className="faq_question"
           onClick={() => setOpen(!open)}
         >
-          <span>{question}</span>
+          <div className={'faq_question_text'}>Как использовать наш сервис?</div>
           <img
             src="/images/faq/button-faq.svg"
             alt=""
@@ -28,13 +30,55 @@ function FaqItem({ question, answer, defaultOpen }) {
             }}
           />
         </button>
+        <div className={`${open ? 'line' : ''}`} />
 
-      </div>
-      {open && <div className="faq_answer">
-        <div className={'faq_title'}>1. Откройте Telegram</div>
+        {open &&
+          <div className="faq_answer">
+            <div className={'faq_title'}>1. Откройте Telegram</div>
 
+            <div className={'faq_answer_row_container'}>
+              <img src="/images/strelka.svg" alt="" />
+              <div className={'first_stage'}>
+                У вас не работает Telegram? Добавьте наш бесплатный прокси (можно добавить только при наличии Telegram
+                на девайсе).
+              </div>
+            </div>
+            <button
+              onMouseMove={(e) => {
+                const rect = e.currentTarget.getBoundingClientRect();
+                e.currentTarget.style.setProperty('--x', `${e.clientX - rect.left}px`);
+                e.currentTarget.style.setProperty('--y', `${e.clientY - rect.top}px`);
+              }}
+              className={'faq_button'}>
+              <img width={18} height={18} src="/images/faq/tg.svg" alt="" />
+              Добавить прокси
+            </button>
+            <div className={'faq_title margin_32'}>2. Откройте Telegram и перейдите в бота</div>
+            <button
+              onMouseMove={(e) => {
+                const rect = e.currentTarget.getBoundingClientRect();
+                e.currentTarget.style.setProperty('--x', `${e.clientX - rect.left}px`);
+                e.currentTarget.style.setProperty('--y', `${e.clientY - rect.top}px`);
+              }}
+              className={'faq_button width_179'}>
+              <img width={18} height={18} src="/images/faq/logo.svg" alt="" />
+              Motion
+              <img className={'strelka '} width={18} height={18} src="/images/strelka.svg" alt="" />
+
+            </button>
+            <div className={'faq_title margin_32'}>3. Откройте Telegram и перейдите в бота</div>
+            <img width={725} height={253} src="/images/faq/1-faq-stage.png" alt="" />
+            <div className={'faq_title margin_32'}>4. Нажмите подключить устройство</div>
+            <img width={725} height={253} src="/images/faq/2-faq-stage.png" alt="" />
+            <div className={'faq_title margin_32'}>5. Выберите приложение и нажмите кнопку установки</div>
+            <img width={725} height={410} src="/images/faq/3-faq-stage.png" alt="" />
+            <div className={'faq_title margin_32'}>6. После установки приложения нажмите “Добавить подписку”</div>
+            <img width={725} height={410} src="/images/faq/4-faq-stage.png" alt="" />
+            <div className={'faq_title margin_32'}>7. Готово! Можете включить и использовать сервис.</div>
+
+          </div>
+        }
       </div>
-      }
     </>
 
   );
@@ -381,24 +425,15 @@ export default function Home() {
           <section id="faq" className="section faq_section">
             <h2 className="section_title">FAQ</h2>
             <div className="faq_list">
-              {[{
-                q: 'Вопрос 1',
-                a: 'Ответ на первый вопрос. Здесь может быть развёрнутое описание и полезная информация для пользователя.',
-              }, { q: 'Вопрос 2', a: 'Ответ на второй вопрос.' }, {
-                q: 'Вопрос 3', a: 'Ответ на третий вопрос.',
-              }, { q: 'Вопрос 4', a: 'Ответ на четвёртый вопрос.' }, {
-                q: 'Вопрос 5', a: 'Ответ на пятый вопрос.',
-              }].map((item, i) => (
-                <FaqItem
-                  key={item.q}
-                  question={item.q}
-                  answer={item.a}
-                  defaultOpen={i === 0}
-                />))}
+
+              <FaqItem />
             </div>
           </section>
         </div>
+        <Footer/>
+
       </main>
+
       <Device state={open} handleClosePopup={handleClosePopup} />;
       <Content
         isContentOpen={isContentOpen}

@@ -345,7 +345,7 @@ const Device = (props) => {
                 <img
                   width={15}
                   height={15}
-                  src={'/images/device/mobile/lineicons_telegram.svg'}
+                  src={'/images/device/mobile/tg.svg'}
                   alt="telegram"
                 />
               </button>
