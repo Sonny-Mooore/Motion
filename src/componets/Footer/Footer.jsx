@@ -57,7 +57,7 @@ const Footer = () => {
         <div className={'footer_title'}>
           О проекте
         </div>
-        <div onClick={() => router.push('/terms')}className={'footer_nav'}>
+        <div onClick={() => router.push('/terms')} className={'footer_nav'}>
           Политика конфиденциальности
         </div>
         <div className={'footer_nav'}>
@@ -68,7 +68,7 @@ const Footer = () => {
         <div className={'footer_title'}>
           Поддержка
         </div>
-        <div className={'footer_nav'}>
+        <div onClick={() => router.push('https://t.me/motionhelper')} className={'footer_nav'}>
           <img src="/images/faq/tg.svg" alt="" width={18} height={18} />
           Telegram
         </div>
