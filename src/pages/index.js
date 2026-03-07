@@ -426,7 +426,7 @@ export default function Home() {
 
           <section id="faq" className="section faq_section">
             <h2 className="section_title">FAQ</h2>
-            <div className="faq_list">
+            <div className="faq_list ">
               <div className={`faq_item ${faqOpen ? 'faq_item_open' : ''}`}>
                 <button
                   type="button"
@@ -494,7 +494,7 @@ export default function Home() {
                 </div>}
               </div>
             </div>
-            <div className="faq_list">
+            <div className="faq_list faq_margin_top">
               <div className={`faq_item ${faqSecondOpen ? 'faq_item_open' : ''}`}>
 
                 <button
@@ -517,27 +517,27 @@ export default function Home() {
 
                 {faqSecondOpen && <div className="faq_answer">
 
-                  <div className={'row'}>
+                  <div className={'row_faq'}>
                     Для обеспечения безопасности и анонимности ваших интернет-соединений мы
                     применяем современные технологии, такие как VLESS и XTLS-Reality.
                   </div>
                   <div className={'footer_title margin_32'}>Вот как это функционирует:</div>
 
-                  <div className={'row'}>
+                  <div className={'row_faq'}>
                     VLESS — один из самых быстрых и надежных протоколов подключения. Он не позволяет вашему
                     интернет-провайдеру определить, что вы используете VPN, в отличие от устаревших технологий,
                     применяемых в бесплатных и ненадежных сервисах.
                   </div>
-                  <div className={'row'}>
+                  <div className={'row_faq'}>
                     XTLS-Reality — это дополнительный уровень защиты, который полностью скрывает ваш трафик. Все ваши
                     действия в интернете становятся недоступными для оператора связи. Например, посещение YouTube и
                     Instagram может выглядеть как посещение Rutube и РБК.
                   </div>
-                  <div className={'row'}>
+                  <div className={'row_faq'}>
                     Отсутствие сбора данных. Мы не собираем никакой информации о ваших действиях в интернете, запросах
                     или использовании трафика.
                   </div>
-                  <div className={'row'}>
+                  <div className={'row_faq'}>
                     Применяемые нами методы шифрования делают невозможным отслеживание действий пользователя даже для
                     нас. Ваш интернет-провайдер видит только зашифрованные и замаскированные данные.
                   </div>

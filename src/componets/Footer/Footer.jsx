@@ -1,4 +1,5 @@
 import React from 'react';
+import { router } from 'next/client';
 
 const Footer = () => {
   return (<div className={'footer'}>
@@ -6,15 +7,15 @@ const Footer = () => {
       <img src="/images/footer/footer_logo.svg" alt="" />
       <img src="/images/footer/Copyright.svg" alt="" />
     </div>
-    <div className={'row'}>
+    <div className={'row_footer'}>
       <div className={'footer_column'}>
         <div className={'footer_title'}>
           Инструкция
         </div>
-        <div className={'footer_nav'}>
+        <div onClick={() => router.push('https://t.me/motionhelper')} className={'footer_nav'}>
           На телефон
         </div>
-        <div className={'footer_nav'}>
+        <div onClick={() => router.push('https://t.me/MotionSize/39')} className={'footer_nav'}>
           На компьютер
         </div>
       </div>
@@ -22,16 +23,33 @@ const Footer = () => {
         <div className={'footer_title'}>
           Навигация
         </div>
-        <div className={'footer_nav'}>
+        <div className={'footer_nav'}
+             onClick={() => {
+               document.getElementById('nav')?.scrollIntoView({
+                 behavior: 'smooth',
+               });
+             }}>
           Главная
         </div>
-        <div className={'footer_nav'}>
+        <div onClick={() => {
+          document.getElementById('tariffs')?.scrollIntoView({
+            behavior: 'smooth',
+          });
+        }} className={'footer_nav'}>
           Тарифы
         </div>
-        <div className={'footer_nav'}>
+        <div onClick={() => {
+          document.getElementById('devices')?.scrollIntoView({
+            behavior: 'smooth',
+          });
+        }} className={'footer_nav'}>
           Устройства
         </div>
-        <div className={'footer_nav'}>
+        <div onClick={() => {
+          document.getElementById('faq')?.scrollIntoView({
+            behavior: 'smooth',
+          });
+        }} className={'footer_nav'}>
           FAQ
         </div>
       </div>
@@ -39,7 +57,7 @@ const Footer = () => {
         <div className={'footer_title'}>
           О проекте
         </div>
-        <div className={'footer_nav'}>
+        <div onClick={() => router.push('/terms')}className={'footer_nav'}>
           Политика конфиденциальности
         </div>
         <div className={'footer_nav'}>
