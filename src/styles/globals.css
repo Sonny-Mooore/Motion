@@ -699,6 +699,56 @@ button {
   pointer-events: none;
 }
 
+.blur-3{
+  position: absolute;
+  top: 2307px;
+  right: -632px;
+  width: 678px;
+  height: 678px;
+  border-radius: 1178px;
+  background: #d12600;
+  filter: blur(630px);
+  z-index: -1;
+  pointer-events: none;
+}
+.blur-4{
+  position: absolute;
+  top: 2907px;
+  left: -632px;
+  width: 678px;
+  height: 678px;
+  border-radius: 1178px;
+  background: #d12600;
+  filter: blur(630px);
+  z-index: -1;
+  pointer-events: none;
+}
+.blur-5{
+  position: absolute;
+  top: 3407px;
+  right: -632px;
+  width: 678px;
+  height: 678px;
+  border-radius: 1178px;
+  background: #d12600;
+  filter: blur(630px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/*.blur-6{*/
+/*  position: absolute;*/
+/*  top: 4207px;*/
+/*  left: -632px;*/
+/*  width: 678px;*/
+/*  height: 678px;*/
+/*  border-radius: 1178px;*/
+/*  background: #d12600;*/
+/*  filter: blur(630px);*/
+/*  z-index: -1;*/
+/*  pointer-events: none;*/
+/*}*/
+
 @media screen and (max-width: 880px) {
   .blur-1 {
     width: 200px;
