@@ -337,6 +337,7 @@ export default function Home() {
                   <button
                     type="button"
                     className="tariff_paid_btn"
+                    onClick={() => router.push('https://t.me/motionvpnbot')}
                     onMouseMove={(e) => {
                       const rect = e.currentTarget.getBoundingClientRect();
                       e.currentTarget.style.setProperty('--x', `${e.clientX - rect.left}px`);
@@ -535,7 +536,6 @@ export default function Home() {
                 <div className={`${faqSecondOpen ? 'line' : ''}`} />
 
                 {faqSecondOpen && <div className="faq_answer">
-
                   <div className={'row_faq'}>
                     Для обеспечения безопасности и анонимности ваших интернет-соединений мы
                     применяем современные технологии, такие как VLESS и XTLS-Reality.
