@@ -92,15 +92,25 @@
     flex-direction: column;
     align-items: stretch;
     height: auto;
-    gap: 24px;
+    gap: 54px;
   }
 
   .row_footer {
     flex-direction: column;
-    gap: 24px;
+    gap: 64px;
   }
 
   .footer_column {
     max-width: 100%;
+  }
+
+  .footer_logo {
+    width: 143px;
+    height: 28px;
+  }
+
+  .Copyright {
+    width: 157px;
+    height: 22px;
   }
 }

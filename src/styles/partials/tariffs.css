@@ -295,8 +295,9 @@
   }
 
   .tariff_paid_card {
-    min-width: 0;
-    width: 100%;
+    min-width: unset;
+
+    width: unset;
     border-radius: 32px;
     height: auto;
     min-height: unset;
