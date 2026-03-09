@@ -134,7 +134,7 @@ export default function Home() {
       <div className="blur-2" />
       <div className="blur-3" />
       <div className="blur-4" />
-      <div className="blur-5" />
+      {/*<div className="blur-5" />*/}
       {/*<div className="blur-6" />*/}
       <main className="main-wrap">
         <Header handleClosePopup={handleClosePopup} />
