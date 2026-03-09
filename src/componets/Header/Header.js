@@ -13,7 +13,10 @@ const Header = (props) => {
 
   return (<>
     <div id={'nav'} className="header">
-      <img src="/images/logo.svg" width={160} height={58} alt="loog" />
+      <div className={'logo_bg'}>
+        <img src="/images/logo.svg" width={113} height={22} alt="loog" />
+
+      </div>
       <div className={'nav_bg'}>
         <p
           onClick={() => router.push('/')}
