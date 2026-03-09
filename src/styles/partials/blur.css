@@ -127,3 +127,70 @@
   }
 }
 
+@media screen and (max-width: 480px) {
+  .blur-1 {
+    position: absolute;
+    top: -150px;
+    left: -500px;
+    width: 524px;
+    height: 524px;
+    border-radius: 684px;
+    background: #d12600;
+    filter: blur(350px);
+  }
+
+  .blur-2 {
+    position: absolute;
+    top: 1107px;
+    right: -352px;
+    left: unset;
+    width: 350px;
+    height: 1178px;
+    border-radius: 1178px;
+    background: #d12600;
+    filter: blur(630px);
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .blur-3 {
+    position: absolute;
+    top: 3607px;
+    left: -632px;
+    width: 878px;
+    height: 678px;
+    border-radius: 1178px;
+    background: #d12600;
+    filter: blur(630px);
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .blur-4 {
+    position: absolute;
+    top: 5507px;
+    right: -632px;
+    left: unset;
+    width: 678px;
+    height: 678px;
+    border-radius: 1178px;
+    background: #d12600;
+    filter: blur(630px);
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .blur-5 {
+    position: absolute;
+    top: 6207px;
+    right: -332px;
+    width: 278px;
+    height: 678px;
+    border-radius: 1178px;
+    background: #d12600;
+    filter: blur(630px);
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
