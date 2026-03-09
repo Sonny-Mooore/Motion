@@ -135,6 +135,7 @@
   justify-content: space-between;
   align-items: start;
   height: 100%;
+  width: 100%;
 }
 
 .tariff_paid_features {
@@ -210,10 +211,9 @@
   opacity: 1;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1216px) {
   .tariffs_paid_wrap {
     flex-wrap: wrap;
-    max-width: 768px;
     gap: 20px;
     justify-content: flex-start;
   }
@@ -221,6 +221,13 @@
   .tariff_paid_card {
     flex: 1 1 calc(50% - 10px);
     min-width: 240px;
+  }
+
+}
+
+@media (max-width: 1214px) {
+  .tariff_paid_features {
+    margin: 0 !important;
   }
 }
 
@@ -281,7 +288,8 @@
   }
 }
 
-@media (max-width: 807px) {
+
+@media (max-width: 855px) {
   .tariff_paid_card {
     max-width: unset;
     justify-content: center;

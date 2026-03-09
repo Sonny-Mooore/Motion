@@ -33,7 +33,11 @@
   background: rgba(0, 0, 0, 0.02);
   backdrop-filter: blur(25px);
   box-sizing: border-box;
+
 }
+
+
+
 
 @media screen and (max-width: 480px) {
   .content {

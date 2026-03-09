@@ -16,6 +16,38 @@
   object-fit: contain;
   margin: 50px 0 32px 0;
 }
+@media (max-width: 1218px) {
+  .devices_section .devices_stores {
+    display: grid;
+    grid-template-columns: repeat(15, minmax(0, 1fr));
+    gap: 16px;
+    width: 100%;
+  }
+
+  .devices_section .devices_stores .store_btn {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  .devices_section .devices_stores .store_btn:nth-child(1),
+  .devices_section .devices_stores .store_btn:nth-child(2),
+  .devices_section .devices_stores .store_btn:nth-child(3),
+  .devices_section .devices_stores .store_btn:nth-child(4),
+  .devices_section .devices_stores .store_btn:nth-child(5) {
+    grid-column: span 3;
+    height: 92px;
+  }
+
+  .devices_section .devices_stores .store_btn:nth-child(6),
+  .devices_section .devices_stores .store_btn:nth-child(7),
+  .devices_section .devices_stores .store_btn:nth-child(8) {
+    grid-column: span 5;
+    height: 92px;
+  }
+}
 
 @media (max-width: 880px) {
   .devices_laptop {
