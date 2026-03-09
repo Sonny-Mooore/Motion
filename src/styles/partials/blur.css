@@ -63,10 +63,10 @@
 @media screen and (max-width: 880px) {
   .blur-1 {
     position: absolute;
-    top: -100px;
-    right: -500px;
-    width: 684px;
-    height: 684px;
+    top: -150px;
+    left: -500px;
+    width: 524px;
+    height: 524px;
     border-radius: 684px;
     background: #d12600;
     filter: blur(350px);
@@ -74,9 +74,10 @@
 
   .blur-2 {
     position: absolute;
-    top: 607px;
-    left: -632px;
-    width: 707px;
+    top: 1207px;
+    right: -352px;
+    left: unset;
+    width: 407px;
     height: 1178px;
     border-radius: 1178px;
     background: #d12600;
@@ -87,7 +88,7 @@
 
   .blur-3 {
     position: absolute;
-    top: 2307px;
+    top: 2607px;
     right: -632px;
     width: 678px;
     height: 678px;
