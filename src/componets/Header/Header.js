@@ -13,9 +13,7 @@ const Header = (props) => {
 
   return (<>
     <div id={'nav'} className="header">
-      <div className={'logo_bg'} onClick={() => go('/')}>
-        <img src="/images/logo.svg" width={112} height={22} alt="loog" />
-      </div>
+      <img src="/images/logo.svg" width={160} height={58} alt="loog" />
       <div className={'nav_bg'}>
         <p
           onClick={() => router.push('/')}

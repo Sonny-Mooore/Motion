@@ -97,6 +97,10 @@ button {
   overflow: hidden;
 }
 
+.hero_phones_880 {
+  display: none;
+}
+
 .container {
   width: 100%;
   max-width: 1220px;
@@ -121,6 +125,17 @@ button {
   box-sizing: border-box;
   margin: 0 auto;
   max-width: 1220px;
+}
+
+@media screen and (max-width: 880px) {
+  .main-wrap {
+    padding: 0 20px;
+  }
+
+  .content {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 @media screen and (max-width: 640px) {
@@ -265,34 +280,34 @@ button {
   justify-content: space-between;
 }
 
-.logo_bg {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
+/*.logo_bg {*/
+/*  display: inline-flex;*/
+/*  align-items: center;*/
+/*  gap: 12px;*/
 
-  padding: 15px 24px;
-  border-radius: 18px;
+/*  padding: 15px 24px;*/
+/*  border-radius: 18px;*/
 
-  color: #fff;
-  font-weight: 600;
-  letter-spacing: 2px;
-  background: linear-gradient(
-          180deg,
-          rgba(255, 255, 255, 0.1) 0%,
-          rgba(255, 255, 255, 0.03) 10%
-  );
+/*  color: #fff;*/
+/*  font-weight: 600;*/
+/*  letter-spacing: 2px;*/
+/*  background: linear-gradient(*/
+/*          180deg,*/
+/*          rgba(255, 255, 255, 0.1) 0%,*/
+/*          rgba(255, 255, 255, 0.03) 10%*/
+/*  );*/
 
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+/*  backdrop-filter: blur(20px);*/
+/*  -webkit-backdrop-filter: blur(20px);*/
 
-  border: rgba(255, 255, 255, 0.07) 1px solid;
+/*  border: rgba(255, 255, 255, 0.07) 1px solid;*/
 
-  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.15),
-  inset 0 -8px 24px rgba(0, 0, 0, 0.35),
-  0 8px 30px rgba(0, 0, 0, 0.4);
+/*  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.15),*/
+/*  inset 0 -8px 24px rgba(0, 0, 0, 0.35),*/
+/*  0 8px 30px rgba(0, 0, 0, 0.4);*/
 
-  transition: 0.3s ease;
-}
+/*  transition: 0.3s ease;*/
+/*}*/
 
 .nav_bg {
   position: relative;
@@ -397,10 +412,6 @@ button {
     padding: 16px 0 0 0;
   }
 
-  .logo_bg {
-    padding: 12px 16px;
-    gap: 8px;
-  }
 
   .robot,
   .tg {
@@ -872,13 +883,19 @@ button {
 }
 
 @media (max-width: 880px) {
+  .hero {
+    padding: 100px 0 40px;;
+  }
+
   .hero_row {
-    flex-direction: column;
+    flex-direction: column-reverse;
     text-align: center;
+    gap: 32px;
   }
 
   .hero_left {
     max-width: 100%;
+    min-width: 0;
   }
 
   .hero_subtitle {
@@ -888,15 +905,43 @@ button {
 
   .hero_features {
     justify-content: center;
+    width: 100%;
+    max-width: 319px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero_title {
     font-size: 38px;
   }
 
+  .hero_right {
+    width: 100%;
+    max-width: 530px;
+    height: 448px;
+    /*display: none;*/
+    min-height: 280px;
+  }
+
+  .hero_phones_880 {
+    display: block;
+    right: -120px;
+    position: absolute;
+    top: -76px;
+  }
+
+
   .hero_phones {
     max-height: 320px;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    position: relative;
+    display: none;
+    left: 50%;
+    transform: translateX(-50%);
   }
+
 }
 
 @media (max-width: 640px) {
@@ -958,6 +1003,34 @@ button {
 @media (max-width: 900px) {
   .feature_cards {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 880px) {
+  .section {
+    margin: 40px auto 44px auto;
+    max-width: 768px;
+    padding: 0;
+  }
+
+  .tariff_free_title {
+    font-size: 24px !important;
+    font-weight: 600 !important;
+  }
+
+
+  .section_title {
+    font-size: 28px;
+  }
+
+  .feature_cards {
+    gap: 16px;
+    padding: 0;
+  }
+
+  .card_feature {
+    padding: 20px 16px;
   }
 }
 
@@ -1130,6 +1203,7 @@ button {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
+  font-weight: 500;
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -1199,12 +1273,58 @@ button {
 @media (max-width: 1000px) {
   .tariffs_paid_wrap {
     flex-wrap: wrap;
+    max-width: 768px;
+
+    gap: 20px;
     justify-content: flex-start;
   }
 
   .tariff_paid_card {
     flex: 1 1 calc(50% - 10px);
     min-width: 240px;
+  }
+}
+
+@media (max-width: 880px) {
+  .tariffs_section {
+    gap: 28px;
+  }
+
+  .tariff_paid_desc {
+    font-size: 20px;
+  }
+
+  .tariff_paid_title {
+    font-size: 20px;
+  }
+
+  .tariff_paid_feature {
+    font-size: 20px;
+  }
+
+  .tariff_paid_card {
+    width: 100%;
+    max-width: 324px;
+    flex: 1 1 calc(50% - 10px);
+    min-width: 200px;
+    height: auto;
+    min-height: 380px;
+  }
+
+  .tariff_free_btn {
+    font-size: 20px;
+  }
+
+  .tariff_free_card {
+    padding: 24px 24px;
+    height: 229px;
+    /*max-width: ;*/
+    justify-content: space-between;
+  }
+
+  .tariff_free_desc {
+    font-size: 20px;
+    font-weight: 400;
   }
 }
 
@@ -1224,11 +1344,64 @@ button {
 }
 
 
+.devices_section {
+  width: 100%;
+}
+
 .devices_laptop {
   width: 100%;
   height: 100%;
   object-fit: contain;
   margin: 50px 0 32px 0;
+}
+
+@media (max-width: 880px) {
+  .devices_laptop {
+    margin: 36px 0 24px 0;
+  }
+
+  .devices_section .devices_stores {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 16px;
+    width: 100%;
+  }
+
+  .devices_section .devices_stores .store_btn,
+  .devices_section .devices_stores .store_btn_max_width,
+  .devices_section .devices_stores .store_btn_tablet {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
+
+  /* 1 ряд: 3 карточки по 2 колонки */
+  .devices_section .devices_stores .store_btn:nth-child(-n + 3) {
+    grid-column: span 2;
+    height: 92px;
+  }
+
+  /* 2 ряд: 2 карточки по 3 колонки */
+  .devices_section .devices_stores .store_btn:nth-child(4),
+  .devices_section .devices_stores .store_btn:nth-child(5) {
+    grid-column: span 3;
+    height: 92px;
+  }
+
+  /* 3 ряд: 3 карточки по 2 колонки */
+  .devices_section .devices_stores .store_btn:nth-child(n + 6) {
+    grid-column: span 2;
+    height: 92px;
+  }
+
+  .devices_section .devices_stores .device_pill_label {
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 
@@ -1262,8 +1435,8 @@ button {
 }
 
 .store_btn_max_width {
-  max-width: 368px !important;
-  width: 100% !important;
+  max-width: 368px;
+  width: 100%;
 }
 
 .device_pill {
@@ -1456,18 +1629,43 @@ button {
 
 @media (max-width: 900px) {
   .advantages_grid {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    margin: 40px 0 0;
+    height: auto;
   }
 
   .advantages_card_conatainer {
-    grid-column: auto !important;
-    grid-row: auto !important;
+    width: 100%;
+    /*height: 196px;*/
+    padding: 24px;
+    border-radius: 32px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
-}
 
-@media (max-width: 520px) {
-  .advantages_grid {
-    grid-template-columns: 1fr;
+  .cabinet_card {
+    order: 10;
+    height: 448px;
+  }
+
+  .advantages_paid_title {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .advantages_paid_desc {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .advantages_paid_icon {
+    width: 64px;
+    height: 64px;
   }
 }
 
@@ -1503,7 +1701,8 @@ button {
   gap: 16px;
   margin: 54px 0 0 0;
 }
-.faq_margin_top{
+
+.faq_margin_top {
   margin: 24px 0 0 0;
 
 }
@@ -1528,7 +1727,7 @@ button {
 }
 
 .faq_item_open {
-  /*align-items: stretch;*/
+  align-items: stretch;
 }
 
 .faq_question {
@@ -1589,6 +1788,12 @@ button {
   line-height: normal;
 }
 
+@media screen and (max-width: 880px) {
+  .faq_title {
+    font-size: 22px;
+  }
+}
+
 .faq_answer_row_container {
   display: flex;
   gap: 5px;
@@ -1637,6 +1842,7 @@ button {
   border: 1px solid rgba(255, 255, 255, .1);
   overflow: hidden;
   z-index: 1;
+  backdrop-filter: blur(122222px);
 }
 
 
@@ -1688,10 +1894,10 @@ button {
 
 
 .footer {
-  margin: 72px auto 0 auto
-;
+  margin: 72px auto 0 auto;
   display: flex;
   width: 1112px;
+  max-width: 100%;
   padding: 54px;
   flex-direction: row;
   justify-content: space-between;
@@ -1701,6 +1907,26 @@ button {
   border-radius: 32px;
   border-top: 1px solid rgba(255, 255, 255, .1);
   background: rgba(255, 255, 255, 0.02);
+  box-sizing: border-box;
+}
+
+@media (max-width: 880px) {
+  .footer {
+    width: 100%;
+    margin: 56px auto 0 auto;
+    padding: 36px 24px;
+    flex-wrap: wrap;
+    height: auto;
+    min-height: 160px;
+    flex-direction: column;
+    gap: 54px;
+    backdrop-filter: blur(1px);
+  }
+
+  .row_footer {
+    gap: 32px;
+    flex-direction: column;
+  }
 }
 
 .row_footer {
@@ -1755,4 +1981,201 @@ button {
   display: flex;
   flex-direction: column;
   gap: 18px;
+}
+
+/* ----- Адаптив до 408px (мобильный) ----- */
+@media screen and (max-width: 408px) {
+  .main-wrap {
+    padding: 0 16px;
+  }
+
+  .content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .header {
+    padding: 16px 0 0 0;
+    gap: 8px;
+  }
+
+  .hero {
+    padding: 32px 0 32px;
+  }
+
+  .hero_row {
+    gap: 24px;
+  }
+
+  .hero_title {
+    font-size: 28px;
+  }
+
+  .hero_subtitle {
+    font-size: 14px;
+    margin-bottom: 32px;
+  }
+
+  .hero_cta {
+    margin-bottom: 16px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero_features {
+    gap: 48px;
+    max-width: 100%;
+  }
+
+  .hero_right {
+    min-height: 220px;
+  }
+
+  .hero_phones {
+    max-height: 260px;
+  }
+
+  .section {
+    padding: 32px 0 36px;
+  }
+
+  .section_title {
+    font-size: 28px;
+  }
+
+  .feature_cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .card_feature {
+    padding: 16px;
+    height: auto;
+    min-height: 54px;
+  }
+
+  .card_feature_title {
+    font-size: 16px;
+  }
+
+  .tariffs_section {
+    gap: 24px;
+  }
+
+  .tariffs_paid_wrap {
+    flex-direction: column;
+  }
+
+  .tariff_paid_card {
+    flex: 1 1 100%;
+    min-width: 0;
+    width: 100%;
+    height: auto;
+    min-height: auto;
+  }
+
+  .tariff_free_card {
+    padding: 20px 16px;
+  }
+
+  .tariff_free_title {
+    font-size: 20px;
+  }
+
+  .tariff_paid_title {
+    font-size: 16px;
+  }
+
+  .devices_laptop {
+    margin: 28px 0 20px 0;
+  }
+
+  .devices_stores {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .store_btn {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .store_btn_max_width {
+    width: 100%;
+  }
+
+  .advantages_section .advantages_grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .advantages_card_conatainer {
+    padding: 20px 16px;
+  }
+
+  .advantages_paid_title {
+    font-size: 18px;
+  }
+
+  .advantages_paid_desc {
+    font-size: 16px;
+  }
+
+  .faq_list {
+    margin-top: 28px;
+    gap: 12px;
+  }
+
+  .faq_item {
+    padding: 12px 16px;
+    max-height: none;
+  }
+
+  .faq_question_text {
+    font-size: 18px;
+  }
+
+  .faq_answer {
+    padding-top: 6px;
+    max-height: 70vh;
+  }
+
+  .faq_answer img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .first_stage {
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  .faq_title {
+    font-size: 18px;
+  }
+
+  .faq_button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .footer {
+    margin: 40px auto 0 auto;
+    padding: 28px 16px;
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    gap: 24px;
+  }
+
+  .row_footer {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .footer_column {
+    max-width: 100%;
+  }
 }

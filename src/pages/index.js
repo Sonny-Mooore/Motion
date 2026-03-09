@@ -171,6 +171,11 @@ export default function Home() {
                   className="hero_phones"
                   alt=""
                 />
+                <img
+                  src="/images/880.png"
+                  className="hero_phones_880"
+                  alt=""
+                />
               </div>
             </div>
           </section>
@@ -244,7 +249,13 @@ export default function Home() {
                     e.currentTarget.style.setProperty('--y', `${e.clientY - rect.top}px`);
                   }}
                 >
-                  Получить бесплатно →
+                  Получить бесплатно
+                  <img
+                    width={14}
+                    height={11}
+                    src="/images/Vector.svg"
+                    alt=""
+                  />
                 </button>
               </div>
             </div>
@@ -256,11 +267,9 @@ export default function Home() {
                 margin: 94,
                 desc: 'Идеальный тарифный план для повседневных потребностей.',
                 features: [{
-                  icon: '/images/tariffs/download.svg',
-                  text: 'Безлимит',
+                  icon: '/images/tariffs/download.svg', text: 'Безлимит',
                 }, { icon: '/images/tariffs/phone.svg', text: '4 устройства' }, {
-                  icon: '/images/tariffs/done-all.svg',
-                  text: 'Все сервера',
+                  icon: '/images/tariffs/done-all.svg', text: 'Все сервера',
                 }],
                 price: 'от 239 Р / мес',
               }, {
@@ -269,11 +278,9 @@ export default function Home() {
                 name: 'Семейный тариф',
                 desc: 'Тариф для использования легких нейросетей и серфинга интернета с лимитом на ГБ в месяц.',
                 features: [{
-                  icon: '/images/tariffs/download.svg',
-                  text: 'Безлимит',
+                  icon: '/images/tariffs/download.svg', text: 'Безлимит',
                 }, { icon: '/images/tariffs/phone.svg', text: '4 устройства' }, {
-                  icon: '/images/tariffs/done-all.svg',
-                  text: 'Все сервера',
+                  icon: '/images/tariffs/done-all.svg', text: 'Все сервера',
                 }],
                 price: 'от 389 Р / мес',
               }, {
@@ -282,11 +289,9 @@ export default function Home() {
                 name: 'Студенческий тариф',
                 desc: 'У вас большая семья? Раздайте сервис всем, они будут рады',
                 features: [{
-                  icon: '/images/tariffs/download.svg',
-                  text: 'Безлимит',
+                  icon: '/images/tariffs/download.svg', text: 'Безлимит',
                 }, { icon: '/images/tariffs/phone.svg', text: '4 устройства' }, {
-                  icon: '/images/tariffs/done-all.svg',
-                  text: 'Все сервера',
+                  icon: '/images/tariffs/done-all.svg', text: 'Все сервера',
                 }],
                 price: 'от 99 Р / мес',
               }, {
@@ -295,11 +300,9 @@ export default function Home() {
                 margin: 94,
                 desc: 'Идеальный тарифный план для повседневных потребностей.',
                 features: [{
-                  icon: '/images/tariffs/download.svg',
-                  text: 'Безлимит',
+                  icon: '/images/tariffs/download.svg', text: 'Безлимит',
                 }, { icon: '/images/tariffs/phone.svg', text: '4 устройства' }, {
-                  icon: '/images/tariffs/done-all.svg',
-                  text: 'Все сервера',
+                  icon: '/images/tariffs/done-all.svg', text: 'Все сервера',
                 }],
                 price: 'от 25 Р / день',
               }].map((t) => (<div key={t.name} className="tariff_paid_card">
@@ -362,7 +365,7 @@ export default function Home() {
               }, {
                 label: 'IOS', icon: '/images/devices/apple.svg',
               }, {
-                label: 'macOC', icon: '/images/devices/apple.svg',
+                label: 'macOS', icon: '/images/devices/apple.svg',
               }, {
                 label: 'Linux', icon: '/images/devices/linux.svg',
               }, {
@@ -371,16 +374,15 @@ export default function Home() {
                 label: 'Apple TV', maxWidth: true, icon: '/images/devices/desktop.svg',
               }, {
                 label: 'Smart TV', maxWidth: true, icon: '/images/devices/desktop.svg',
-              }].map((s) => (
-                <div key={s.label} type="button" className={s.maxWidth ? 'store_btn store_btn_max_width' : `store_btn`}>
-                  <img
-                    width={52}
-                    height={52}
-                    src={s.icon}
-                    alt=""
-                  />
-                  <span className="device_pill_label">{s.label}</span>
-                </div>))}
+              }].map((s) => (<div key={s.label} className={s.maxWidth ? 'store_btn store_btn_max_width' : `store_btn`}>
+                <img
+                  width={52}
+                  height={52}
+                  src={s.icon}
+                  alt=""
+                />
+                <span className="device_pill_label">{s.label}</span>
+              </div>))}
             </div>
           </section>
 
@@ -404,10 +406,13 @@ export default function Home() {
                 icon: '2-people.svg',
                 title: 'Реферальная программа',
                 text: 'Много друзей? Приглашайте их в наш бот и получайте вознаграждение. Чтобы присоединиться к программе, перейдите в  приложение, скопируйте ваше приглашение в профиле и отправьте его другу. ',
-              }].map((a) => (<div className="advantages_card_conatainer">
+              }].map((a) => (<div className={`
+                  advantages_card_conatainer ${a.title === 'Удобный личный кабинет' ? 'cabinet_card' : ''}
+                  `}>
                 <div key={a.title} className="advantages_paid_header">
                   <img
                     width={52}
+                    className={'advantages_paid_icon'}
                     height={52}
                     src={`/images/advantages/${a.icon}`}
                     alt=""

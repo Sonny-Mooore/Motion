@@ -38,25 +38,19 @@ const BurgerMenu = ({ isOpen, onClose, onInstructions }) => {
         aria-hidden={!isOpen}
       >
         <div className={styles.menuHeader}>
-          <a
-            href="/"
-            className={styles.menuLogo}
-            onClick={(e) => {
-              e.preventDefault();
-              go('/');
-            }}
-          >
-            <img src="/images/logo.svg" width={112} height={22} alt="Motion" />
-          </a>
+          <img onClick={(e) => {
+            e.preventDefault();
+            go('/');
+          }} src="/images/logo.svg" width={160} height={58} alt="loog" />
           <div className={styles.menuIcons}>
-           
+
             <button
               type="button"
               className={styles.menuIconBtn}
               onClick={onClose}
               aria-label="Закрыть меню"
             >
-              <img src="/images/burger.svg" alt=""  />
+              <img src="/images/burger.svg" alt="" />
             </button>
           </div>
         </div>
