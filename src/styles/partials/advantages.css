@@ -1,5 +1,5 @@
 .advantages_grid {
-  width: 1220px;
+  max-width: 1220px;
   margin: 54px 0 0 0;
   height: 496px;
   display: grid;
