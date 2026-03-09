@@ -361,6 +361,13 @@ export default function Home() {
               src="/images/devices/desktop-1.png"
               alt=""
             />
+            <img
+              className={'devices_phone'}
+              src="/images/devices/devices_phone_bg.png"
+              alt=""
+            />
+
+            <img className={'devices_icons'} src="/images/devices/devices_icons.svg" alt="" />
 
             <div className="devices_stores">
               {[{

@@ -1,0 +1,96 @@
+.page {
+  position: relative;
+  isolation: isolate;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hero_phones_880 {
+  display: none;
+}
+
+.hero_phones_408 {
+  display: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 24px;
+}
+
+.main-wrap {
+  z-index: 1;
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.content {
+  width: max-content;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1220px;
+}
+
+@media screen and (max-width: 880px) {
+  .main-wrap {
+    padding: 0 20px;
+  }
+
+  .content {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .main-wrap,
+  .container {
+    padding: 0 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-wrap {
+    padding: 0 44px;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero_phones_880 {
+    display: none !important;
+  }
+
+  .hero_phones_408 {
+    display: block;
+    position: absolute;
+    top: -45px;
+    height: 465px;
+    width: 345px;
+    right: -33px;
+    object-fit: contain;
+  }
+}

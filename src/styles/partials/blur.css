@@ -1,0 +1,79 @@
+.blur-1 {
+  position: absolute;
+  top: -100px;
+  right: -500px;
+  width: 684px;
+  height: 684px;
+  border-radius: 684px;
+  background: #d12600;
+  filter: blur(350px);
+}
+
+.blur-2 {
+  position: absolute;
+  top: 607px;
+  left: -632px;
+  width: 1178px;
+  height: 1178px;
+  border-radius: 1178px;
+  background: #d12600;
+  filter: blur(630px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.blur-3 {
+  position: absolute;
+  top: 2307px;
+  right: -632px;
+  width: 678px;
+  height: 678px;
+  border-radius: 1178px;
+  background: #d12600;
+  filter: blur(630px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.blur-4 {
+  position: absolute;
+  top: 2907px;
+  left: -632px;
+  width: 678px;
+  height: 678px;
+  border-radius: 1178px;
+  background: #d12600;
+  filter: blur(630px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.blur-5 {
+  position: absolute;
+  top: 3407px;
+  right: -632px;
+  width: 678px;
+  height: 678px;
+  border-radius: 1178px;
+  background: #d12600;
+  filter: blur(630px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 880px) {
+  .blur-1 {
+    width: 200px;
+    height: 200px;
+    right: -20px;
+    filter: blur(80px);
+  }
+
+  .blur-2 {
+    width: 400px;
+    height: 400px;
+    left: -145px;
+    top: 70%;
+    filter: blur(150px);
+  }
+}

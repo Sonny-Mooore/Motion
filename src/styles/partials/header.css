@@ -1,0 +1,197 @@
+.header {
+  padding: 24px 0 0 0;
+  margin: 0 auto 0 auto;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1220px;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav_bg {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+  padding: 0 8px;
+  gap: 24px;
+  flex: 1;
+  max-width: 900px;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 2px;
+  background: rgba(255, 255, 255, 0.02);
+  -webkit-backdrop-filter: blur(22px) saturate(140%);
+  backdrop-filter: blur(22px) saturate(140%);
+  border: rgba(255, 255, 255, 0.07) 1px solid;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.18),
+    inset 0 -18px 30px rgba(0, 0, 0, 0.45),
+    0 10px 40px rgba(0, 0, 0, 0.55);
+  transition: 2.5s ease;
+  border-radius: 18px;
+}
+
+.icon_button_container {
+  display: flex;
+  gap: 8px;
+}
+
+.icon_btn {
+  display: block;
+  width: 52px;
+  height: 52px;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.02);
+  color: #fff;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.15),
+    inset 0 -8px 24px rgba(0, 0, 0, 0.35),
+    0 8px 30px rgba(0, 0, 0, 0.4);
+  transition: 0.3s ease;
+}
+
+.icon_btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.burger_btn {
+  display: none;
+  width: 52px;
+  height: 52px;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.02);
+  color: #fff;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.15),
+    inset 0 -8px 24px rgba(0, 0, 0, 0.35),
+    0 8px 30px rgba(0, 0, 0, 0.4);
+  transition: 0.3s ease;
+}
+
+.burger_btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.burger_btn svg {
+  display: block;
+}
+
+@media screen and (max-width: 1280px) {
+  .nav_bg {
+    display: none;
+  }
+
+  .burger_btn {
+    display: flex;
+  }
+
+  .header {
+    padding: 20px 0 0 0;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 16px 0 0 0;
+    gap: 8px;
+  }
+
+  .robot,
+  .tg {
+    padding: 12px 14px;
+  }
+}
+
+.nav_item {
+  margin: 0;
+  width: 100%;
+  height: 36px;
+  display: flex;
+  padding: 0 12px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  font-size: 18px;
+  max-width: 297px;
+  font-weight: 400;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  align-items: center;
+  border-radius: 12px;
+  backdrop-filter: blur(20px);
+  border: 1px solid transparent;
+  -webkit-backdrop-filter: blur(20px);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.robot {
+  padding: 16px 18px;
+  width: 16px;
+  height: 20px;
+  border-radius: 18px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.02);
+  border: rgba(255, 255, 255, 0.07) 1px solid;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.15),
+    inset 0 -8px 24px rgba(0, 0, 0, 0.35),
+    0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.tg {
+  padding: 18px 16px;
+  width: 20px;
+  height: 16px;
+  cursor: pointer;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.02);
+  border: rgba(255, 255, 255, 0.07) 1px solid;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.15),
+    inset 0 -8px 24px rgba(0, 0, 0, 0.35),
+    0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.nav_item:hover {
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.15),
+    inset 0 -8px 24px rgba(0, 0, 0, 0.35),
+    0 8px 30px rgba(0, 0, 0, 0.4);
+  transition: 0.5s ease background;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(1.5px);
+}
+
+.nav_item_is_Active {
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.15),
+    inset 0 -8px 24px rgba(0, 0, 0, 0.35),
+    0 8px 30px rgba(0, 0, 0, 0.4);
+  transition: 0.5s ease background;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(1.5px);
+}
