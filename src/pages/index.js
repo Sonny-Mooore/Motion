@@ -235,7 +235,7 @@ export default function Home() {
                   <img
                     width={52}
                     height={52}
-                    src="/images/tariffs/icons-1.svg"
+                    src="/images/tariffs/Icons-1.svg"
                     alt=""
                   />
                   <h3 className="tariff_free_title">Бесплатный тариф</h3>
