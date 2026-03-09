@@ -193,10 +193,10 @@
   transform: translate(-50%, -50%);
   border-radius: 50%;
   background: radial-gradient(
-    circle,
-    rgba(255, 70, 70, 0.55) 0%,
-    rgba(255, 0, 0, 0.28) 25%,
-    transparent 70%
+          circle,
+          rgba(255, 70, 70, 0.55) 0%,
+          rgba(255, 0, 0, 0.28) 25%,
+          transparent 70%
   );
   filter: blur(35px);
   pointer-events: none;
@@ -281,6 +281,18 @@
   }
 }
 
+@media (max-width: 807px) {
+  .tariff_paid_card {
+    max-width: unset;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .tariff_paid_desc_container {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .tariffs_section {
     gap: 24px;
@@ -322,6 +334,7 @@
     height: 57px;
     border-radius: 18px;
   }
+
   .tariff_paid_btn {
     height: 57px;
     border-radius: 18px;
