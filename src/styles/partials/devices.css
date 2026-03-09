@@ -16,7 +16,7 @@
   object-fit: contain;
   margin: 50px 0 32px 0;
 }
-@media (max-width: 1218px) {
+@media (max-width: 1266px) {
   .devices_section .devices_stores {
     display: grid;
     grid-template-columns: repeat(15, minmax(0, 1fr));

@@ -2,6 +2,16 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
+  padding: 0 24px;
+}
+
+
+
+
+.page {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
 }
 
 .bg {
@@ -47,6 +57,12 @@
   /*padding: 0 24px;*/
   max-width: 1220px;
 }
+
+/*@media screen and (max-width: 1252px ) {*/
+/*  .content {*/
+/*    padding: 0 ;*/
+/*  }*/
+/*}*/
 
 @media screen and (max-width: 1218px ) {
   .content {
