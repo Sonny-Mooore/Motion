@@ -101,6 +101,10 @@ button {
   display: none;
 }
 
+.hero_phones_408 {
+  display: none;
+}
+
 .container {
   width: 100%;
   max-width: 1220px;
@@ -136,6 +140,7 @@ button {
     width: 100%;
     max-width: 100%;
   }
+
 }
 
 @media screen and (max-width: 640px) {
@@ -149,6 +154,22 @@ button {
   .main-wrap,
   .container {
     padding: 0 12px;
+  }
+
+
+  .hero_phones_880 {
+    display: none !important;
+  }
+
+  .hero_phones_408 {
+    display: block;
+    position: absolute;
+    top: -45px;
+    height: 465px;
+    width: 345px;
+    right: -33px;
+    object-fit: contain;
+
   }
 }
 
@@ -813,6 +834,7 @@ button {
   max-width: 560px;
 }
 
+
 .hero_title {
   font-family: 'Montserrat', sans-serif;
   color: #FFF;
@@ -947,10 +969,13 @@ button {
 @media (max-width: 640px) {
   .hero_title {
     font-size: 34px;
+    text-align: left;
   }
 
   .hero_subtitle {
     font-size: 16px;
+    text-align: left;
+
   }
 }
 
@@ -1030,7 +1055,7 @@ button {
   }
 
   .card_feature {
-    padding: 20px 16px;
+    padding: 24px;
   }
 }
 
@@ -1038,6 +1063,7 @@ button {
   .feature_cards {
     grid-template-columns: 1fr;
   }
+
 }
 
 /* Tariffs — flexbox layout as in design */
@@ -1265,11 +1291,6 @@ button {
   opacity: 1;
 }
 
-/*.tariff_paid_btn:hover {*/
-/*  background: rgba(255, 255, 255, 0.1);*/
-/*  border-color: rgba(255, 255, 255, 0.2);*/
-/*}*/
-
 @media (max-width: 1000px) {
   .tariffs_paid_wrap {
     flex-wrap: wrap;
@@ -1343,6 +1364,19 @@ button {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .tariff_free_btn {
+    height:57px;
+  }
+  .tariff_free_card{
+    height: auto;
+  }
+
+  .tariff_free_desc {
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
 
 .devices_section {
   width: 100%;
@@ -1903,7 +1937,6 @@ button {
   justify-content: space-between;
   align-items: start;
   gap: 32px;
-  height: 190px;
   border-radius: 32px;
   border-top: 1px solid rgba(255, 255, 255, .1);
   background: rgba(255, 255, 255, 0.02);
@@ -1983,10 +2016,9 @@ button {
   gap: 18px;
 }
 
-/* ----- Адаптив до 408px (мобильный) ----- */
-@media screen and (max-width: 408px) {
+@media screen and (max-width: 480px) {
   .main-wrap {
-    padding: 0 16px;
+    padding: 0 44px;
   }
 
   .content {
@@ -2004,7 +2036,7 @@ button {
   }
 
   .hero_row {
-    gap: 24px;
+    gap: 42px;
   }
 
   .hero_title {
@@ -2028,7 +2060,8 @@ button {
   }
 
   .hero_right {
-    min-height: 220px;
+    width: 289px;
+    height: 411px;
   }
 
   .hero_phones {
@@ -2048,14 +2081,8 @@ button {
     gap: 12px;
   }
 
-  .card_feature {
-    padding: 16px;
-    height: auto;
-    min-height: 54px;
-  }
-
   .card_feature_title {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .tariffs_section {
@@ -2064,18 +2091,23 @@ button {
 
   .tariffs_paid_wrap {
     flex-direction: column;
+    width: 100%;
+    max-width: unset;
+    justify-content: center;
+    align-items: center;
+
   }
 
   .tariff_paid_card {
-    flex: 1 1 100%;
     min-width: 0;
     width: 100%;
     height: auto;
-    min-height: auto;
+    min-height: unset;
   }
 
   .tariff_free_card {
     padding: 20px 16px;
+    max-width: 345px;
   }
 
   .tariff_free_title {
