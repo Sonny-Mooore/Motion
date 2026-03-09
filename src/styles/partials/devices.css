@@ -6,6 +6,10 @@
   display: none;
 }
 
+.devices_phone {
+  display: none;
+}
+
 .devices_laptop {
   width: 100%;
   height: 100%;
