@@ -96,7 +96,7 @@
 }
 
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 410px) {
   .main-wrap {
     padding: 0 11px;
   }
