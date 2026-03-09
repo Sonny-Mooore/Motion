@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Device from '@/componets/modal/device/Device';
 import { Content } from '@/componets/modal/content/Content';
 import Footer from '@/componets/Footer/Footer';
+import { router } from 'next/client';
 
 const FIRST_VISIT_KEY = 'motion_first_visit_done';
 
@@ -248,6 +249,7 @@ export default function Home() {
                 <button
                   type="button"
                   className="tariff_free_btn"
+                  onClick={() => router.push('https://t.me/motionvpnbot')}
                   onMouseMove={(e) => {
                     const rect = e.currentTarget.getBoundingClientRect();
                     e.currentTarget.style.setProperty('--x', `${e.clientX - rect.left}px`);
