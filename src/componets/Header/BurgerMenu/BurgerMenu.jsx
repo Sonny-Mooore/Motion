@@ -26,8 +26,7 @@ const BurgerMenu = ({ isOpen, onClose, onInstructions }) => {
     onClose();
   };
 
-  return (
-    <>
+  return (<>
       <div
         className={`${styles.overlay} ${isOpen ? styles.overlay_open : ''}`}
         onClick={onClose}
@@ -75,14 +74,13 @@ const BurgerMenu = ({ isOpen, onClose, onInstructions }) => {
                 tabIndex={0}
                 className={styles.navLink}
                 onClick={() => {
-                  onInstructions?.();
+                  document.getElementById('tariffs')?.scrollIntoView({
+                    behavior: 'smooth',
+                  });
                   onClose();
                 }}
-                onKeyDown={(e) =>
-                  e.key === 'Enter' && (onInstructions?.(), onClose())
-                }
               >
-                Инструкции
+                Тарифы
               </span>
             </li>
             <li className={styles.navItem}>
@@ -90,10 +88,15 @@ const BurgerMenu = ({ isOpen, onClose, onInstructions }) => {
                 role="button"
                 tabIndex={0}
                 className={styles.navLink}
-                onClick={() => go('/terms')}
+                onClick={() => {
+                  document.getElementById('devices')?.scrollIntoView({
+                    behavior: 'smooth',
+                  });
+                  onClose();
+                }}
                 onKeyDown={(e) => e.key === 'Enter' && go('/terms')}
               >
-                Правила использования
+                 Устройства
               </span>
             </li>
             <li className={styles.navItem}>
@@ -101,12 +104,34 @@ const BurgerMenu = ({ isOpen, onClose, onInstructions }) => {
                 role="button"
                 tabIndex={0}
                 className={styles.navLink}
-                onClick={() => go('/privacy')}
+                onClick={() => {
+                  document.getElementById('advantages')?.scrollIntoView({
+                    behavior: 'smooth',
+                  });
+                  onClose();
+                }}
                 onKeyDown={(e) => e.key === 'Enter' && go('/privacy')}
               >
-                Политика конфиденциальности
+                Приемущества
               </span>
             </li>
+            <li className={styles.navItem}>
+              <span
+                role="button"
+                tabIndex={0}
+                className={styles.navLink}
+                onClick={() => {
+                  document.getElementById('faq')?.scrollIntoView({
+                    behavior: 'smooth',
+                  });
+                  onClose();
+                }}
+                onKeyDown={(e) => e.key === 'Enter' && go('/privacy')}
+              >
+                FAQ
+              </span>
+            </li>
+
           </ul>
         </nav>
 
@@ -119,9 +144,7 @@ const BurgerMenu = ({ isOpen, onClose, onInstructions }) => {
                 tabIndex={0}
                 className={styles.supportLink}
                 onClick={() => goExternal('https://t.me/MotionSize')}
-                onKeyDown={(e) =>
-                  e.key === 'Enter' && goExternal('https://t.me/MotionSize')
-                }
+                onKeyDown={(e) => e.key === 'Enter' && goExternal('https://t.me/MotionSize')}
               >
                 <img className={styles.tg_icon} src="/images/tg.svg" alt="" />
                 <img className={styles.tg_black} src="/images/tg-black.svg" alt="" />
@@ -134,9 +157,7 @@ const BurgerMenu = ({ isOpen, onClose, onInstructions }) => {
                 tabIndex={0}
                 className={styles.supportLink}
                 onClick={() => goExternal('https://t.me/motionvpnbot')}
-                onKeyDown={(e) =>
-                  e.key === 'Enter' && goExternal('https://t.me/motionvpnbot')
-                }
+                onKeyDown={(e) => e.key === 'Enter' && goExternal('https://t.me/motionvpnbot')}
               >
                 <img className={styles.robot_icon} src="/images/robot.svg" alt="" />
                 <img className={styles.robot_black} src="/images/robot-black.svg" alt="" />
@@ -146,8 +167,7 @@ const BurgerMenu = ({ isOpen, onClose, onInstructions }) => {
           </ul>
         </div>
       </aside>
-    </>
-  );
+    </>);
 };
 
 export default BurgerMenu;

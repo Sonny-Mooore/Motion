@@ -11,12 +11,12 @@
   border-radius: 32px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.02);
-  box-sizing: border-box;
 }
 
 @media (max-width: 880px) {
   .footer {
     width: 100%;
+    box-sizing: border-box;
     margin: 56px auto 0 auto;
     padding: 36px 24px;
     flex-wrap: wrap;
