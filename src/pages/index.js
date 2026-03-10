@@ -60,7 +60,13 @@ export default function Home() {
       <div className="blur-3" />
       <div className="blur-4" />
       <div className="blur-5" />
-      {/*<div className="blur-6" />*/}
+      <div className="blur-6" />
+      <div className="blur-7" />
+      <div className="blur-8" />
+      <div className="blur-9" />
+      <div className="blur-10" />
+      <div className="blur-11" />
+      <div className="blur-12" />
       <main className="main-wrap">
         <Header handleClosePopup={handleClosePopup} />
         <div className="content">
