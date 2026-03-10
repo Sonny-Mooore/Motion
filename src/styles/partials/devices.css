@@ -16,6 +16,7 @@
   object-fit: contain;
   margin: 50px 0 32px 0;
 }
+
 @media (max-width: 1266px) {
   .devices_section .devices_stores {
     display: grid;
@@ -251,5 +252,15 @@
     width: 100%;
   }
 
+}
 
+
+@media screen and (max-width: 420px) {
+  .devices_phone {
+    width: 100%;
+  }
+
+  .devices_icons {
+    width: 100%;
+  }
 }
