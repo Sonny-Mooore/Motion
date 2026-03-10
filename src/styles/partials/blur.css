@@ -74,6 +74,8 @@
 }
 
 @media screen and (max-width: 880px) {
+
+
   .blur-1 {
     position: absolute;
     top: -150px;
@@ -137,7 +139,8 @@
   .blur-6 {
     position: absolute;
     top: 3600px;
-    right: -50px;
+    right: 50px;
+    display: block;
     width: 360px;
     height: 360px;
     border-radius: 50%;
@@ -148,9 +151,10 @@
 
   .blur-7 {
     position: absolute;
-    top: 4300px;
+    top: 3300px;
     left: -50px;
     width: 340px;
+    display: block;
     height: 340px;
     border-radius: 50%;
     background: #d12600;
@@ -160,8 +164,10 @@
 
   .blur-8 {
     position: absolute;
-    top: 5000px;
+    top: 3400px;
     right: -50px;
+    left: unset;
+    display: block;
     width: 340px;
     height: 340px;
     border-radius: 50%;
@@ -172,8 +178,9 @@
 
   .blur-9 {
     position: absolute;
-    top: 5700px;
+    top: 4700px;
     left: -50px;
+    display: block;
     width: 320px;
     height: 320px;
     border-radius: 50%;
@@ -185,6 +192,7 @@
   .blur-10 {
     position: absolute;
     top: 6400px;
+    display: block;
     right: -50px;
     width: 320px;
     height: 320px;
@@ -199,6 +207,7 @@
     top: 7100px;
     left: -50px;
     width: 300px;
+    display: block;
     height: 300px;
     border-radius: 50%;
     background: #d12600;
@@ -211,6 +220,7 @@
     top: 7800px;
     right: -50px;
     width: 300px;
+    display: block;
     height: 300px;
     border-radius: 50%;
     background: #d12600;
