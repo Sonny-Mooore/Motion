@@ -88,6 +88,26 @@
     padding: 0 16px;
   }
 }
+@media screen and (max-width: 714px) {
+
+  .hero_phones_880 {
+    display: none !important;
+  }
+
+  .hero_phones_408 {
+    display: block;
+    position: absolute;
+    top: -45px;
+    height: 465px;
+    width: 345px;
+    right: -33px;
+    object-fit: contain;
+  }
+
+
+}
+
+
 
 @media screen and (max-width: 480px) {
   .main-wrap {

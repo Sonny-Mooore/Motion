@@ -180,6 +180,14 @@
   }
 }
 
+@media screen and (max-width: 714px) {
+  .hero_right {
+    width: 289px;
+    height: 411px;
+  }
+}
+
+
 @media screen and (max-width: 480px) {
   .hero {
     padding: 32px 0 32px;
@@ -213,10 +221,7 @@
     max-width: 100%;
   }
 
-  .hero_right {
-    width: 289px;
-    height: 411px;
-  }
+
 
   .hero_phones {
     max-height: 260px;
