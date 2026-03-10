@@ -97,6 +97,18 @@
   opacity: 0.9;
 }
 
+@media screen and (max-width: 958px){
+  .hero_row {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 32px;
+  }
+
+  .hero_left{
+
+  }
+}
+
 @media (max-width: 880px) {
   .hero {
     padding: 100px 0 40px;
