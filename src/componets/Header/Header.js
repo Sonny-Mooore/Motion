@@ -14,7 +14,7 @@ const Header = (props) => {
   return (<>
     <div id={'nav'} className="header">
       <div className={'logo_bg'}>
-        <img src="/images/logo.svg" width={113} height={22} alt="loog" />
+        <img  className={"logo_header"} src="/images/logo.svg" width={113} height={22} alt="loog" />
 
       </div>
       <div className={'nav_bg'}>
