@@ -1,6 +1,6 @@
 .blur-1 {
   position: absolute;
-  top: -100px;
+  top: 0;
   right: -500px;
   width: 684px;
   height: 684px;
@@ -131,7 +131,7 @@
   .blur-1 {
     position: absolute;
     top: -150px;
-    left: -100px;
+    left: 0;
     width: 524px;
     height: 524px;
     border-radius: 684px;
@@ -142,7 +142,7 @@
   .blur-2 {
     position: absolute;
     top: 1107px;
-    right: -100px;
+    right: 0;
     left: unset;
     width: 350px;
     height: 1178px;
@@ -156,7 +156,7 @@
   .blur-3 {
     position: absolute;
     top: 3607px;
-    left: -100px;
+    left: 0;
     width: 878px;
     height: 678px;
     border-radius: 1178px;
@@ -169,7 +169,7 @@
   .blur-4 {
     position: absolute;
     top: 5507px;
-    right: -100px;
+    right: 0;
     left: unset;
     width: 678px;
     height: 678px;
@@ -183,7 +183,7 @@
   .blur-5 {
     position: absolute;
     top: 6207px;
-    right: -100px;
+    right: 0;
     width: 278px;
     height: 678px;
     border-radius: 1178px;
