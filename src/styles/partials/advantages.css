@@ -152,13 +152,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
 
   .advantages_card_conatainer {
     padding: 20px 16px;
-    width: 82%;
+    width: auto;
     box-sizing: unset;
-    margin: 0 auto;
+    margin: 0;
 
   }
 
@@ -184,6 +185,7 @@
     width: 271px;
     height: 227px;
   }
+
   .advantages_paid_desc {
     font-size: 16px;
   }
