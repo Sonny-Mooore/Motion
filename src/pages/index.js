@@ -443,14 +443,34 @@ export default function Home() {
 
                   </button>
                   <div className={'faq_title margin_32'}>3. Откройте Telegram и перейдите в бота</div>
-                  <img width={725} height={253} src="/images/faq/1-faq-stage.png" alt="" />
+                  <img className={'faq_desktop_image'} width={725} height={253} src="/images/faq/1-faq-stage.png"
+                       alt="" />
+
+                  <img className={'faq_mobile_image_1'} src="/images/faq/mobile/1.svg"
+                       alt="" />
+
                   <div className={'faq_title margin_32'}>4. Нажмите подключить устройство</div>
-                  <img width={725} height={253} src="/images/faq/2-faq-stage.png" alt="" />
+                  <img className={'faq_desktop_image'} width={725} height={253} src="/images/faq/2-faq-stage.png"
+                       alt="" />
+
+                  <img className={'faq_mobile_image_1'} src="/images/faq/mobile/2.svg"
+                       alt="" />
+
                   <div className={'faq_title margin_32'}>5. Выберите приложение и нажмите кнопку установки</div>
-                  <img width={725} height={410} src="/images/faq/3-faq-stage.png" alt="" />
+                  <img className={'faq_desktop_image'} width={725} height={410} src="/images/faq/3-faq-stage.png"
+                       alt="" />
+
+                  <img className={'faq_mobile_image_1'} src="/images/faq/mobile/3.svg"
+                       alt="" />
+
                   <div className={'faq_title margin_32'}>6. После установки приложения нажмите “Добавить подписку”
                   </div>
-                  <img width={725} height={410} src="/images/faq/4-faq-stage.png" alt="" />
+                  <img className={'faq_desktop_image'} width={725} height={410} src="/images/faq/4-faq-stage.png"
+                       alt="" />
+
+                  <img className={'faq_mobile_image_1'} src="/images/faq/mobile/4.svg"
+                       alt="" />
+
                   <div className={'faq_title margin_32'}>7. Готово! Можете включить и использовать сервис.</div>
 
                 </div>}
