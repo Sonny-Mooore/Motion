@@ -108,7 +108,7 @@ export default function Home() {
                   alt=""
                 />
                 <img
-                  src="/images/408.png"
+                  src="/images/408.svg"
                   className="hero_phones_408"
                   alt=""
                 />
