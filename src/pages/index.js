@@ -47,6 +47,18 @@ export default function Home() {
         property="og:title"
         content="Motion VPN — быстрый VPN для TikTok Mod и всех устройств"
       />
+      <link
+        rel="icon"
+        href="/images//logo-dark.svg"
+        type="image/svg+xml"
+        media="(prefers-color-scheme: light)"
+      />
+      <link
+        rel="icon"
+        href="/images//logo-white.svg"
+        type="image/svg+xml"
+        media="(prefers-color-scheme: dark)"
+      />
       <meta
         property="og:description"
         content="Быстрые сервера, стабильное подключение и бесплатный пробный период. Рабочий VPN для TikTok Mod, игр и стриминговых сервисов."
