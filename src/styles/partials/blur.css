@@ -230,73 +230,6 @@
 
 }
 
-/*@media screen and (max-width: 480px) {*/
-/*  .blur-1 {*/
-/*    position: absolute;*/
-/*    top: -150px;*/
-/*    left: 0;*/
-/*    width: 524px;*/
-/*    height: 524px;*/
-/*    border-radius: 684px;*/
-/*    background: #d12600;*/
-/*    filter: blur(350px);*/
-/*  }*/
-
-/*  .blur-2 {*/
-/*    position: absolute;*/
-/*    top: 1107px;*/
-/*    right: 0;*/
-/*    left: unset;*/
-/*    width: 350px;*/
-/*    height: 1178px;*/
-/*    border-radius: 1178px;*/
-/*    background: #d12600;*/
-/*    filter: blur(630px);*/
-/*    z-index: -1;*/
-/*    pointer-events: none;*/
-/*  }*/
-
-/*  .blur-3 {*/
-/*    position: absolute;*/
-/*    top: 3607px;*/
-/*    left: 0;*/
-/*    width: 878px;*/
-/*    height: 678px;*/
-/*    border-radius: 1178px;*/
-/*    background: #d12600;*/
-/*    filter: blur(630px);*/
-/*    z-index: -1;*/
-/*    pointer-events: none;*/
-/*  }*/
-
-/*  .blur-4 {*/
-/*    position: absolute;*/
-/*    top: 5507px;*/
-/*    right: 0;*/
-/*    left: unset;*/
-/*    width: 678px;*/
-/*    height: 678px;*/
-/*    border-radius: 1178px;*/
-/*    background: #d12600;*/
-/*    filter: blur(630px);*/
-/*    z-index: -1;*/
-/*    pointer-events: none;*/
-/*  }*/
-
-/*  .blur-5 {*/
-/*    position: absolute;*/
-/*    top: 6207px;*/
-/*    right: 0;*/
-/*    width: 278px;*/
-/*    height: 678px;*/
-/*    border-radius: 1178px;*/
-/*    background: #d12600;*/
-/*    filter: blur(630px);*/
-/*    z-index: -1;*/
-/*    pointer-events: none;*/
-/*  }*/
-/*}*/
-
 @media screen and (max-width: 480px) {
 
   .blur-1 {
@@ -307,7 +240,7 @@
     height: 320px;
     border-radius: 50%;
     background: #d12600;
-    filter: blur(120px);
+    filter: blur(130px);
     opacity: 0.7;
   }
 
@@ -319,7 +252,7 @@
     height: 320px;
     border-radius: 50%;
     background: #d12600;
-    filter: blur(140px);
+    filter: blur(130px);
     opacity: 0.7;
   }
 
@@ -331,7 +264,7 @@
     height: 320px;
     border-radius: 50%;
     background: #d12600;
-    filter: blur(140px);
+    filter: blur(130px);
     opacity: 0.7;
   }
 
@@ -367,7 +300,7 @@
     height: 280px;
     border-radius: 50%;
     background: #d12600;
-    filter: blur(120px);
+    filter: blur(130px);
     opacity: 0.7;
   }
 
@@ -379,7 +312,7 @@
     height: 260px;
     border-radius: 50%;
     background: #d12600;
-    filter: blur(120px);
+    filter: blur(130px);
     opacity: 0.7;
   }
 
@@ -391,7 +324,7 @@
     height: 260px;
     border-radius: 50%;
     background: #d12600;
-    filter: blur(110px);
+    filter: blur(130px);
     opacity: 0.7;
   }
 
@@ -403,7 +336,7 @@
     height: 240px;
     border-radius: 50%;
     background: #d12600;
-    filter: blur(110px);
+    filter: blur(130px);
     opacity: 0.7;
   }
 
@@ -427,7 +360,7 @@
     height: 220px;
     border-radius: 50%;
     background: #d12600;
-    filter: blur(100px);
+    filter: blur(130px);
     opacity: 0.7;
   }
 
@@ -439,7 +372,7 @@
     height: 220px;
     border-radius: 50%;
     background: #d12600;
-    filter: blur(90px);
+    filter: blur(130px);
     opacity: 0.7;
   }
 

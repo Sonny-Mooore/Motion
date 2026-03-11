@@ -88,22 +88,22 @@ const Header = (props) => {
           />
         </button>
 
-        <button
-          type="button"
-          className="burger_btn"
-          onClick={openBurger}
-          aria-label="Открыть меню"
-        >
-          <img src="/images/burger.svg" alt="" />
-        </button>
+        {/*<button*/}
+        {/*  type="button"*/}
+        {/*  className="burger_btn"*/}
+        {/*  onClick={openBurger}*/}
+        {/*  aria-label="Открыть меню"*/}
+        {/*>*/}
+        {/*  <img src="/images/burger.svg" alt="" />*/}
+        {/*</button>*/}
       </div>
     </div>
 
-    <BurgerMenu
-      isOpen={isBurgerOpen}
-      onClose={closeBurger}
-      onInstructions={handleClosePopup}
-    />
+    {/*<BurgerMenu*/}
+    {/*  isOpen={isBurgerOpen}*/}
+    {/*  onClose={closeBurger}*/}
+    {/*  onInstructions={handleClosePopup}*/}
+    {/*/>*/}
   </>);
 };
 
