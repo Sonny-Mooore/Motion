@@ -331,7 +331,7 @@
   }
 
   .tariff_free_title {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .tariff_paid_title {
@@ -341,11 +341,13 @@
   .tariff_free_btn {
     height: 57px;
     border-radius: 18px;
+    font-size: 18px;
   }
 
   .tariff_paid_btn {
     height: 57px;
     border-radius: 18px;
+    font-size: 18px;
   }
 
   .tariff_paid_desc_container {
@@ -357,11 +359,11 @@
   }
 
   .tariff_paid_desc {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .tariff_free_desc {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
   }
 }
