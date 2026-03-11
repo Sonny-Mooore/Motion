@@ -326,7 +326,7 @@
   .tariff_free_card {
     border-radius: 32px;
     padding: 20px 16px;
-    max-width: 345px;
+    /*max-width: 345px;*/
     height: auto;
   }
 
