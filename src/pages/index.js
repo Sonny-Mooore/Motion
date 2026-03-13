@@ -283,8 +283,8 @@ export default function Home() {
                   name: 'Семейный тариф',
                   desc: 'Тариф для использования легких нейросетей и серфинга интернета с лимитом на ГБ в месяц.',
                   features: [{
-                    icon: '/images/tariffs/download.svg', text: 'Безлимит',
-                  }, { icon: '/images/tariffs/phone.svg', text: '4 устройства' }, {
+                    icon: '/images/tariffs/download.svg', text: '1 TB',
+                  }, { icon: '/images/tariffs/phone.svg', text: '10 устройств' }, {
                     icon: '/images/tariffs/done-all.svg', text: 'Все сервера',
                   }],
                   price: 'от 389 Р / мес',
@@ -294,8 +294,8 @@ export default function Home() {
                   name: 'Студенческий тариф',
                   desc: 'У вас большая семья? Раздайте сервис всем, они будут рады',
                   features: [{
-                    icon: '/images/tariffs/download.svg', text: 'Безлимит',
-                  }, { icon: '/images/tariffs/phone.svg', text: '4 устройства' }, {
+                    icon: '/images/tariffs/download.svg', text: '25 GB',
+                  }, { icon: '/images/tariffs/phone.svg', text: '2 устройства' }, {
                     icon: '/images/tariffs/done-all.svg', text: 'Все сервера',
                   }],
                   price: 'от 99 Р / мес',
