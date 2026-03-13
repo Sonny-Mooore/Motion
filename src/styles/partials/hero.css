@@ -27,6 +27,7 @@
 .hero_left {
   flex: 1;
   min-width: 280px;
+  height: 311px;
   max-width: 560px;
 }
 
@@ -57,6 +58,8 @@
   display: flex;
   gap: 91px;
   width: 319px;
+  transition: all ease-in-out .5s;
+
 }
 
 .hero_features p {

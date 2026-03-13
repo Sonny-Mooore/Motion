@@ -43,7 +43,19 @@
   0 10px 30px rgba(0, 0, 0, 0.55);
   color: #fff;
   z-index: 1;
+  /*transition: all ease-in-out .5s;*/
+
 }
+
+.glass_button_open {
+  height: 143px;
+  backdrop-filter: blur(14px) saturate(140%);
+  width: 319px;
+  /*transition: all ease-in-out .7s;*/
+  cursor: unset;
+
+}
+
 
 @media screen and (max-width: 480px) {
   .glass_button {
@@ -85,11 +97,105 @@
   opacity: 0;
 }
 
+.glass_button_menu {
+  display: none;
+
+}
+
+.glass_button_menu_open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+/*.glass_button_menu_open::before {*/
+/*  content: '';*/
+/*  position: absolute;*/
+/*  left: var(--x, 50%);*/
+/*  top: var(--y, 50%);*/
+/*  width: 159px;*/
+/*  height: 159px;*/
+/*  transform: translate(-50%, -50%);*/
+/*  border-radius: 50%;*/
+/*  background: radial-gradient(*/
+/*          circle,*/
+/*          rgba(255, 70, 70, 0.55) 0%,*/
+/*          rgba(255, 0, 0, 0.28) 25%,*/
+/*          transparent 70%*/
+/*  );*/
+/*  filter: blur(35px);*/
+/*  pointer-events: none;*/
+/*  z-index: 0;*/
+/*  transition: opacity 0.2s ease;*/
+/*  opacity: 0;*/
+/*}*/
+
+.glass_button_menu_open:hover::before {
+  opacity: 1;
+}
+
+.glass_button_menu_open > * {
+  position: relative;
+  z-index: 1;
+}
+
+.glass_button_menu_line {
+  background: rgba(255, 255, 255, 0.05);
+  max-width: 249px;
+  width: 100%;
+  height: 1px;
+  margin: 14px 0 14px 0;
+
+}
+
+.glass_button_menu_title {
+  color: #FFF;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  gap: 11px;
+
+}
+
+.glass_button_menu_text {
+  font-family: "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.46);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+
+}
+
+.glass_button_menu_container {
+  width: min-content;
+  position: relative;
+}
+
 @media screen and (max-width: 880px) {
   .glass_button {
-
     margin: 0 auto;
+  }
 
+  .glass_button_menu_container {
+    margin: 0 auto;
+  }
+
+}
+@media screen and (max-width: 958px) {
+
+  .glass_button_menu_container {
+    margin: 0 auto;
   }
 
 }
