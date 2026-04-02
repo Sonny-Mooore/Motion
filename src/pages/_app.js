@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Script from "next/script";
 import "@/styles/globals.css";
+import ScrollRevealInit from "@/componets/ScrollRevealInit";
 
 const YM_ID = 107053828; // можешь заменить на process.env.NEXT_PUBLIC_YM_ID
 
@@ -53,6 +54,7 @@ export default function App({ Component, pageProps }) {
         }}
       />
 
+      <ScrollRevealInit />
       <Component {...pageProps} />
     </>
   );

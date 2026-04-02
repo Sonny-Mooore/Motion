@@ -1,0 +1,184 @@
+/* Анимации при прокрутке: классы выставляет ScrollRevealInit в _app.js */
+
+/* Header: просто плавное появление (без сдвигов влево/вправо) */
+html.scroll-reveal-js main.main-wrap > .header:not(.scroll-reveal--visible) {
+  opacity: 0;
+  filter: blur(7px);
+}
+
+html.scroll-reveal-js main.main-wrap > .header.scroll-reveal--visible {
+  opacity: 1;
+  filter: blur(0px);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: 0.04s;
+}
+
+/* Секции (кроме hero и блока с карточками — у него анимация по карточкам) */
+html.scroll-reveal-js
+  main.main-wrap
+  > .content
+  > section:not(#hero):not(.feature_cards):not(.scroll-reveal--visible),
+html.scroll-reveal-js main.main-wrap > .footer:not(.scroll-reveal--visible) {
+  opacity: 0;
+  transform: translate3d(0, 44px, 0);
+  pointer-events: none;
+}
+
+main.main-wrap
+  > .content
+  > section:not(#hero):not(.feature_cards).scroll-reveal--visible,
+main.main-wrap > .footer.scroll-reveal--visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  pointer-events: auto;
+  transition:
+    opacity 0.95s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.95s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Hero: последовательное появление текста/CTA */
+html.scroll-reveal-js main.main-wrap > .content > #hero:not(.scroll-reveal--visible)
+  .hero_title,
+html.scroll-reveal-js main.main-wrap > .content > #hero:not(.scroll-reveal--visible)
+  .hero_subtitle,
+html.scroll-reveal-js main.main-wrap > .content > #hero:not(.scroll-reveal--visible)
+  .glass_button_menu_container,
+html.scroll-reveal-js main.main-wrap > .content > #hero:not(.scroll-reveal--visible)
+  .hero_features,
+html.scroll-reveal-js main.main-wrap > .content > #hero:not(.scroll-reveal--visible)
+  .hero_right img {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0);
+  pointer-events: none;
+}
+
+html.scroll-reveal-js main.main-wrap > .content > #hero.scroll-reveal--visible
+  .hero_title,
+html.scroll-reveal-js main.main-wrap > .content > #hero.scroll-reveal--visible
+  .hero_subtitle,
+html.scroll-reveal-js main.main-wrap > .content > #hero.scroll-reveal--visible
+  .glass_button_menu_container,
+html.scroll-reveal-js main.main-wrap > .content > #hero.scroll-reveal--visible
+  .hero_features,
+html.scroll-reveal-js main.main-wrap > .content > #hero.scroll-reveal--visible
+  .hero_right img {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  pointer-events: auto;
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html.scroll-reveal-js main.main-wrap > .content > #hero.scroll-reveal--visible
+  .hero_title {
+  transition-delay: 0.06s;
+}
+
+html.scroll-reveal-js main.main-wrap > .content > #hero.scroll-reveal--visible
+  .hero_subtitle {
+  transition-delay: 0.14s;
+}
+
+html.scroll-reveal-js main.main-wrap > .content > #hero.scroll-reveal--visible
+  .glass_button_menu_container {
+  transition-delay: 0.22s;
+}
+
+html.scroll-reveal-js main.main-wrap > .content > #hero.scroll-reveal--visible
+  .hero_features {
+  transition-delay: 0.3s;
+}
+
+html.scroll-reveal-js main.main-wrap > .content > #hero.scroll-reveal--visible
+  .hero_phones {
+  transition-delay: 0.24s;
+}
+
+html.scroll-reveal-js main.main-wrap > .content > #hero.scroll-reveal--visible
+  .hero_phones_880 {
+  transition-delay: 0.31s;
+}
+
+html.scroll-reveal-js main.main-wrap > .content > #hero.scroll-reveal--visible
+  .hero_phones_408 {
+  transition-delay: 0.38s;
+}
+
+/* Карточки «преимуществ» — каскад */
+html.scroll-reveal-js .feature_cards:not(.scroll-reveal--visible) .card_feature {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+}
+
+.feature_cards.scroll-reveal--visible .card_feature {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.feature_cards.scroll-reveal--visible .card_feature:nth-child(1) {
+  transition-delay: 0.05s;
+}
+.feature_cards.scroll-reveal--visible .card_feature:nth-child(2) {
+  transition-delay: 0.12s;
+}
+.feature_cards.scroll-reveal--visible .card_feature:nth-child(3) {
+  transition-delay: 0.19s;
+}
+.feature_cards.scroll-reveal--visible .card_feature:nth-child(4) {
+  transition-delay: 0.26s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.scroll-reveal-js main.main-wrap > .header:not(.scroll-reveal--visible) {
+    opacity: 1;
+    filter: none;
+  }
+
+  html.scroll-reveal-js
+    main.main-wrap
+    > .content
+    > #hero:not(.scroll-reveal--visible)
+    .hero_title,
+  html.scroll-reveal-js
+    main.main-wrap
+    > .content
+    > #hero:not(.scroll-reveal--visible)
+    .hero_subtitle,
+  html.scroll-reveal-js
+    main.main-wrap
+    > .content
+    > #hero:not(.scroll-reveal--visible)
+    .glass_button_menu_container,
+  html.scroll-reveal-js
+    main.main-wrap
+    > .content
+    > #hero:not(.scroll-reveal--visible)
+    .hero_features,
+  html.scroll-reveal-js
+    main.main-wrap
+    > .content
+    > #hero:not(.scroll-reveal--visible)
+    .hero_right
+    img {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+
+  html.scroll-reveal-js
+    main.main-wrap
+    > .content
+    > section:not(#hero):not(.feature_cards):not(.scroll-reveal--visible),
+  html.scroll-reveal-js main.main-wrap > .footer:not(.scroll-reveal--visible),
+  html.scroll-reveal-js .feature_cards:not(.scroll-reveal--visible) .card_feature {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+}
